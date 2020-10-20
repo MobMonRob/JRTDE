@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ur_rtde/rtde.h
+ur_rtde/rtde_export.h
+-
+boost/asio/io_service.hpp
+-
+boost/asio/ip/tcp.hpp
+-
+cstdint
+-
+functional
+-
+memory
+-
+string
+-
+unordered_map
+-
+utility
+-
+vector
+-
+
+../include/ur_rtde/rtde_control_interface.h
+ur_rtde/rtde_export.h
+-
+ur_rtde/rtde.h
+-
+
+../include/ur_rtde/rtde_export.h
+
+/home/mosab/Schreibtisch/RTDE/ur_rtde/examples/cpp/speedj_example.cpp
+ur_rtde/rtde_control_interface.h
+-
+thread
+-
+chrono
+-
+
