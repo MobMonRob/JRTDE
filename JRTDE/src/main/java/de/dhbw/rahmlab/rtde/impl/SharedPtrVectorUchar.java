@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package de.dhbw.rahmlab.RTDE.impl;
+package de.dhbw.rahmlab.rtde.impl;
 
 public class SharedPtrVectorUchar {
   private transient long swigCPtr;

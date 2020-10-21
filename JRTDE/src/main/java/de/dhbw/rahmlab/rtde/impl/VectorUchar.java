@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package de.dhbw.rahmlab.RTDE.impl;
+package de.dhbw.rahmlab.rtde.impl;
 
 public class VectorUchar extends java.util.AbstractList<Short> implements java.util.RandomAccess {
   private transient long swigCPtr;

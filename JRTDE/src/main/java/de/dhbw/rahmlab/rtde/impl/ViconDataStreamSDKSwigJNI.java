@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package de.dhbw.rahmlab.RTDE.impl;
+package de.dhbw.rahmlab.rtde.impl;
 
 public class ViconDataStreamSDKSwigJNI {
   public final static native long new_VectorUint__SWIG_0();
