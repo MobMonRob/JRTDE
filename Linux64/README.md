@@ -1,4 +1,4 @@
-# Java-Wrapper für ViconDataStream
+# Java-Wrapper für Universal Robotics RTDE Client API
 
 ## Beschreibung
 Dieses Projekt erzeugt einen Java Wrapper um die Vicon DataStream API unter `Ubuntu 18.04 x64` per `Bashskript`.
