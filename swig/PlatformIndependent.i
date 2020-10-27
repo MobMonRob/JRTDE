@@ -5,9 +5,11 @@
 %include "arrays_java.i";
 %include "std_vector.i"
 //namespace std
-%include "std/std_iostream.i"
+//%include "std/std_iostream.i";
+//%include "std_pair.i"
+%include "stdint.i";
 
-//%include "stdint.i"
+
 
 #include <iostream>
 #include "../Linux64/urtde/rtde_export.h"
@@ -29,6 +31,9 @@
 #include "../Linux64/urtde/rtde_utility.h"
 #include "../Linux64/urtde/rtde.h"
 #include "../Linux64/urtde/script_client.h"
+
+
+
 %include <boost_shared_ptr.i>;
 %template(VectorDouble) std::vector<double>;
 %template(VectorInt) std::vector<int>;

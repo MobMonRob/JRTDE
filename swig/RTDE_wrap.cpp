@@ -864,6 +864,9 @@ static jdoubleArray SWIG_JavaArrayOutDouble (JNIEnv *jenv, double *result, jsize
 #include <stdexcept>
 
 
+#include <stdint.h>		// Use the C99 official header
+
+
 /* Check for overflow converting to Java int (always signed 32-bit) from (unsigned variable-bit) size_t */
 SWIGINTERN jint SWIG_JavaIntFromSize_t(size_t size) {
   static const jint JINT_MAX = 0x7FFFFFFF;
@@ -5996,8 +5999,8 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotStat
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1digital_1input_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jobject JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1digital_1input_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jobject jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint64_t result;
   
@@ -6005,27 +6008,63 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getActual_digital_input_bits();
-  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  result = (uint64_t)(arg1)->getActual_digital_input_bits();
+  {
+    jbyteArray ba = jenv->NewByteArray(9);
+    jbyte* bae = jenv->GetByteArrayElements(ba, 0);
+    jclass clazz = jenv->FindClass("java/math/BigInteger");
+    jmethodID mid = jenv->GetMethodID(clazz, "<init>", "([B)V");
+    jobject bigint;
+    int i;
+    
+    bae[0] = 0;
+    for(i=1; i<9; i++ ) {
+      bae[i] = (jbyte)(result>>8*(8-i));
+    }
+    
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
+    bigint = jenv->NewObject(clazz, mid, ba);
+    jenv->DeleteLocalRef(ba);
+    jresult = bigint;
+  }
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1digital_1input_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1digital_1input_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jobject jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint64_t arg2 ;
-  uint64_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(uint64_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint64_t");
-    return ;
+  {
+    jclass clazz;
+    jmethodID mid;
+    jbyteArray ba;
+    jbyte* bae;
+    jsize sz;
+    int i;
+    
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "BigInteger null");
+      return ;
+    }
+    clazz = jenv->GetObjectClass(jarg2);
+    mid = jenv->GetMethodID(clazz, "toByteArray", "()[B");
+    ba = (jbyteArray)jenv->CallObjectMethod(jarg2, mid);
+    bae = jenv->GetByteArrayElements(ba, 0);
+    sz = jenv->GetArrayLength(ba);
+    arg2 = 0;
+    if (sz > 0) {
+      arg2 = (uint64_t)(signed char)bae[0];
+      for(i=1; i<sz; i++) {
+        arg2 = (arg2 << 8) | (uint64_t)(unsigned char)bae[i];
+      }
+    }
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
   }
-  arg2 = *argp2; 
   (arg1)->setActual_digital_input_bits(arg2);
 }
 
@@ -6091,8 +6130,8 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotStat
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getRobot_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getRobot_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6100,27 +6139,21 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getRobot_mode();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getRobot_mode();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setRobot_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setRobot_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setRobot_mode(arg2);
 }
 
@@ -6134,8 +6167,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getRobot_status();
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)(arg1)->getRobot_status();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -6143,18 +6176,12 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
 SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setRobot_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (uint32_t)jarg2; 
   (arg1)->setRobot_status(arg2);
 }
 
@@ -6168,8 +6195,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getSafety_status_bits();
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)(arg1)->getSafety_status_bits();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -6177,18 +6204,12 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
 SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setSafety_1status_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (uint32_t)jarg2; 
   (arg1)->setSafety_status_bits(arg2);
 }
 
@@ -6208,13 +6229,14 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setJoint_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setJoint_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   std::vector< int32_t > *arg2 = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
+  (void)jarg2_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
   arg2 = *(std::vector< int32_t > **)&jarg2;
   if (!arg2) {
@@ -6225,8 +6247,8 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotStat
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getSafety_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getSafety_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6234,27 +6256,21 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getSafety_mode();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getSafety_mode();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setSafety_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setSafety_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setSafety_mode(arg2);
 }
 
@@ -6493,8 +6509,8 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotStat
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1digital_1output_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jobject JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1digital_1output_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jobject jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint64_t result;
   
@@ -6502,27 +6518,63 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getActual_digital_output_bits();
-  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  result = (uint64_t)(arg1)->getActual_digital_output_bits();
+  {
+    jbyteArray ba = jenv->NewByteArray(9);
+    jbyte* bae = jenv->GetByteArrayElements(ba, 0);
+    jclass clazz = jenv->FindClass("java/math/BigInteger");
+    jmethodID mid = jenv->GetMethodID(clazz, "<init>", "([B)V");
+    jobject bigint;
+    int i;
+    
+    bae[0] = 0;
+    for(i=1; i<9; i++ ) {
+      bae[i] = (jbyte)(result>>8*(8-i));
+    }
+    
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
+    bigint = jenv->NewObject(clazz, mid, ba);
+    jenv->DeleteLocalRef(ba);
+    jresult = bigint;
+  }
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1digital_1output_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1digital_1output_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jobject jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint64_t arg2 ;
-  uint64_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(uint64_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint64_t");
-    return ;
+  {
+    jclass clazz;
+    jmethodID mid;
+    jbyteArray ba;
+    jbyte* bae;
+    jsize sz;
+    int i;
+    
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "BigInteger null");
+      return ;
+    }
+    clazz = jenv->GetObjectClass(jarg2);
+    mid = jenv->GetMethodID(clazz, "toByteArray", "()[B");
+    ba = (jbyteArray)jenv->CallObjectMethod(jarg2, mid);
+    bae = jenv->GetByteArrayElements(ba, 0);
+    sz = jenv->GetArrayLength(ba);
+    arg2 = 0;
+    if (sz > 0) {
+      arg2 = (uint64_t)(signed char)bae[0];
+      for(i=1; i<sz; i++) {
+        arg2 = (arg2 << 8) | (uint64_t)(unsigned char)bae[i];
+      }
+    }
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
   }
-  arg2 = *argp2; 
   (arg1)->setActual_digital_output_bits(arg2);
 }
 
@@ -6536,8 +6588,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getRuntime_state();
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)(arg1)->getRuntime_state();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -6657,18 +6709,12 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotStat
 SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setRuntime_1state(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (uint32_t)jarg2; 
   (arg1)->setRuntime_state(arg2);
 }
 
@@ -6682,8 +6728,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_bit_registers0_to_31();
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)(arg1)->getOutput_bit_registers0_to_31();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -6691,18 +6737,12 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
 SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1bit_1registers0_1to_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (uint32_t)jarg2; 
   (arg1)->setOutput_bit_registers0_to_31(arg2);
 }
 
@@ -6716,8 +6756,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_bit_registers32_to_63();
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)(arg1)->getOutput_bit_registers32_to_63();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -6725,24 +6765,18 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
 SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1bit_1registers32_1to_163(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (uint32_t)jarg2; 
   (arg1)->setOutput_bit_registers32_to_63(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6750,33 +6784,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_0();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_0();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_0(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6784,33 +6812,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_1();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_1();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_1(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6818,33 +6840,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_2();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_2();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_2(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6852,33 +6868,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_3();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_3();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_3(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6886,33 +6896,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_4();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_4();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_4(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6920,33 +6924,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_5();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_5();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_5(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6954,33 +6952,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_6();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_6();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_6(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -6988,33 +6980,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_7();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_7();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_7(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7022,33 +7008,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_8();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_8();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_8(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_19(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_19(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7056,33 +7036,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_9();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_9();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_19(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_19(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_9(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_110(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_110(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7090,33 +7064,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_10();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_10();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_110(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_110(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_10(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_111(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_111(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7124,33 +7092,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_11();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_11();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_111(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_111(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_11(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_112(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_112(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7158,33 +7120,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_12();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_12();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_112(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_112(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_12(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_113(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_113(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7192,33 +7148,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_13();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_13();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_113(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_113(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_13(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_114(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_114(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7226,33 +7176,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_14();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_14();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_114(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_114(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_14(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_115(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_115(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7260,33 +7204,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_15();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_15();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_115(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_115(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_15(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_116(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_116(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7294,33 +7232,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_16();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_16();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_116(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_116(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_16(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_117(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_117(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7328,33 +7260,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_17();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_17();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_117(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_117(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_17(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_118(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_118(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7362,33 +7288,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_18();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_18();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_118(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_118(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_18(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_119(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_119(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7396,33 +7316,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_19();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_19();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_119(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_119(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_19(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_120(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_120(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7430,33 +7344,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_20();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_20();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_120(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_120(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_20(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_121(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_121(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7464,33 +7372,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_21();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_21();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_121(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_121(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_21(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_122(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_122(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7498,33 +7400,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_22();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_22();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_122(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_122(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_22(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_123(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_123(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7532,33 +7428,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_23();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_23();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_123(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_123(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_23(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_124(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_124(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7566,33 +7456,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_24();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_24();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_124(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_124(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_24(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_125(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_125(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7600,33 +7484,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_25();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_25();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_125(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_125(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_25(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_126(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_126(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7634,33 +7512,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_26();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_26();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_126(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_126(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_26(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_127(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_127(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7668,33 +7540,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_27();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_27();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_127(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_127(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_27(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_128(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_128(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7702,33 +7568,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_28();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_28();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_128(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_128(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_28(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_129(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_129(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7736,33 +7596,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_29();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_29();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_129(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_129(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_29(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_130(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_130(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7770,33 +7624,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_30();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_30();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_130(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_130(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_30(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7804,33 +7652,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_31();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_31();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_31(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_132(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_132(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7838,33 +7680,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_32();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_32();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_132(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_132(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_32(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_133(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_133(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7872,33 +7708,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_33();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_33();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_133(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_133(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_33(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_134(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_134(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7906,33 +7736,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_34();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_34();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_134(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_134(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_34(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_135(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_135(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7940,33 +7764,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_35();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_35();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_135(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_135(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_35(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_136(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_136(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -7974,33 +7792,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_36();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_36();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_136(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_136(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_36(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_137(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_137(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8008,33 +7820,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_37();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_37();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_137(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_137(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_37(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_138(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_138(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8042,33 +7848,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_38();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_38();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_138(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_138(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_38(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_139(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_139(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8076,33 +7876,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_39();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_39();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_139(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_139(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_39(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_140(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_140(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8110,33 +7904,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_40();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_40();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_140(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_140(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_40(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_141(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_141(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8144,33 +7932,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_41();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_41();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_141(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_141(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_41(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_142(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_142(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8178,33 +7960,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_42();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_42();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_142(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_142(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_42(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_143(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_143(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8212,33 +7988,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_43();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_43();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_143(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_143(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_43(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_144(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_144(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8246,33 +8016,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_44();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_44();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_144(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_144(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_44(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_145(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_145(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8280,33 +8044,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_45();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_45();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_145(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_145(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_45(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_146(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_146(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8314,33 +8072,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_46();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_46();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_146(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_146(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_46(arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_147(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_147(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t result;
   
@@ -8348,27 +8100,21 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotSta
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  result = (arg1)->getOutput_int_register_47();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getOutput_int_register_47();
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_147(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_147(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RobotState **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->setOutput_int_register_47(arg2);
 }
 
@@ -12646,24 +12392,18 @@ SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setStandardDigitalOut(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setStandardDigitalOut(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2, jboolean jarg3) {
   jboolean jresult = 0 ;
   ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
   std::uint8_t arg2 ;
   bool arg3 ;
-  std::uint8_t *argp2 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return 0;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   arg3 = jarg3 ? true : false; 
   result = (bool)(arg1)->setStandardDigitalOut(arg2,arg3);
   jresult = (jboolean)result; 
@@ -12671,24 +12411,18 @@ SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setToolDigitalOut(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setToolDigitalOut(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2, jboolean jarg3) {
   jboolean jresult = 0 ;
   ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
   std::uint8_t arg2 ;
   bool arg3 ;
-  std::uint8_t *argp2 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return 0;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   arg3 = jarg3 ? true : false; 
   result = (bool)(arg1)->setToolDigitalOut(arg2,arg3);
   jresult = (jboolean)result; 
@@ -12713,24 +12447,18 @@ SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setAnalogOutputVoltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jdouble jarg3) {
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setAnalogOutputVoltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2, jdouble jarg3) {
   jboolean jresult = 0 ;
   ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
   std::uint8_t arg2 ;
   double arg3 ;
-  std::uint8_t *argp2 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return 0;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   arg3 = (double)jarg3; 
   result = (bool)(arg1)->setAnalogOutputVoltage(arg2,arg3);
   jresult = (jboolean)result; 
@@ -12738,24 +12466,18 @@ SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setAnalogOutputCurrent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jdouble jarg3) {
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setAnalogOutputCurrent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2, jdouble jarg3) {
   jboolean jresult = 0 ;
   ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
   std::uint8_t arg2 ;
   double arg3 ;
-  std::uint8_t *argp2 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return 0;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   arg3 = (double)jarg3; 
   result = (bool)(arg1)->setAnalogOutputCurrent(arg2,arg3);
   jresult = (jboolean)result; 
@@ -14886,8 +14608,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualDigitalInputBits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jobject JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualDigitalInputBits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jobject jresult = 0 ;
   ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
   uint64_t result;
   
@@ -14895,8 +14617,25 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
-  result = (arg1)->getActualDigitalInputBits();
-  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  result = (uint64_t)(arg1)->getActualDigitalInputBits();
+  {
+    jbyteArray ba = jenv->NewByteArray(9);
+    jbyte* bae = jenv->GetByteArrayElements(ba, 0);
+    jclass clazz = jenv->FindClass("java/math/BigInteger");
+    jmethodID mid = jenv->GetMethodID(clazz, "<init>", "([B)V");
+    jobject bigint;
+    int i;
+    
+    bae[0] = 0;
+    for(i=1; i<9; i++ ) {
+      bae[i] = (jbyte)(result>>8*(8-i));
+    }
+    
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
+    bigint = jenv->NewObject(clazz, mid, ba);
+    jenv->DeleteLocalRef(ba);
+    jresult = bigint;
+  }
   return jresult;
 }
 
@@ -14931,8 +14670,8 @@ SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getRobotMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getRobotMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
   int32_t result;
   
@@ -14940,8 +14679,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
-  result = (arg1)->getRobotMode();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getRobotMode();
+  jresult = (jint)result; 
   return jresult;
 }
 
@@ -14955,8 +14694,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
-  result = (arg1)->getRobotStatus();
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)(arg1)->getRobotStatus();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -14964,7 +14703,7 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
 SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getJointMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
-  SwigValueWrapper< std::vector< int32_t > > result;
+  std::vector< int32_t > result;
   
   (void)jenv;
   (void)jcls;
@@ -14976,8 +14715,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getSafetyMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getSafetyMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
   int32_t result;
   
@@ -14985,8 +14724,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
-  result = (arg1)->getSafetyMode();
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)(arg1)->getSafetyMode();
+  jresult = (jint)result; 
   return jresult;
 }
 
@@ -15000,8 +14739,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
-  result = (arg1)->getSafetyStatusBits();
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)(arg1)->getSafetyStatusBits();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -15126,8 +14865,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualDigitalOutputBits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jobject JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualDigitalOutputBits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jobject jresult = 0 ;
   ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
   uint64_t result;
   
@@ -15135,29 +14874,40 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
-  result = (arg1)->getActualDigitalOutputBits();
-  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  result = (uint64_t)(arg1)->getActualDigitalOutputBits();
+  {
+    jbyteArray ba = jenv->NewByteArray(9);
+    jbyte* bae = jenv->GetByteArrayElements(ba, 0);
+    jclass clazz = jenv->FindClass("java/math/BigInteger");
+    jmethodID mid = jenv->GetMethodID(clazz, "<init>", "([B)V");
+    jobject bigint;
+    int i;
+    
+    bae[0] = 0;
+    for(i=1; i<9; i++ ) {
+      bae[i] = (jbyte)(result>>8*(8-i));
+    }
+    
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
+    bigint = jenv->NewObject(clazz, mid, ba);
+    jenv->DeleteLocalRef(ba);
+    jresult = bigint;
+  }
   return jresult;
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getDigitalOutState(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getDigitalOutState(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   jboolean jresult = 0 ;
   ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
   std::uint8_t arg2 ;
-  std::uint8_t *argp2 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return 0;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   result = (bool)(arg1)->getDigitalOutState(arg2);
   jresult = (jboolean)result; 
   return jresult;
@@ -15173,8 +14923,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERece
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
-  result = (arg1)->getRuntimeState();
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)(arg1)->getRuntimeState();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -15283,51 +15033,40 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDERecei
 SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packUInt32(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   uint32_t arg1 ;
-  uint32_t *argp1 ;
   std::vector< char > result;
   
   (void)jenv;
   (void)jcls;
-  argp1 = *(uint32_t **)&jarg1; 
-  if (!argp1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return 0;
-  }
-  arg1 = *argp1; 
+  arg1 = (uint32_t)jarg1; 
   result = ur_rtde::RTDEUtility::packUInt32(arg1);
   *(std::vector< char > **)&jresult = new std::vector< char >((const std::vector< char > &)result); 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packInt32(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packInt32(JNIEnv *jenv, jclass jcls, jint jarg1) {
   jlong jresult = 0 ;
   int32_t arg1 ;
-  int32_t *argp1 ;
   std::vector< char > result;
   
   (void)jenv;
   (void)jcls;
-  argp1 = *(int32_t **)&jarg1; 
-  if (!argp1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return 0;
-  }
-  arg1 = *argp1; 
+  arg1 = (int32_t)jarg1; 
   result = ur_rtde::RTDEUtility::packInt32(arg1);
   *(std::vector< char > **)&jresult = new std::vector< char >((const std::vector< char > &)result); 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packVectorNInt32(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packVectorNInt32(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
-  SwigValueWrapper< std::vector< int32_t > > arg1 ;
+  std::vector< int32_t > arg1 ;
   std::vector< int32_t > *argp1 ;
   std::vector< char > result;
   
   (void)jenv;
   (void)jcls;
+  (void)jarg1_;
   argp1 = *(std::vector< int32_t > **)&jarg1; 
   if (!argp1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< int32_t >");
@@ -15429,7 +15168,7 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtil
   jlong jresult = 0 ;
   std::vector< char > *arg1 = 0 ;
   uint32_t *arg2 = 0 ;
-  SwigValueWrapper< std::vector< int32_t > > result;
+  std::vector< int32_t > result;
   
   (void)jenv;
   (void)jcls;
@@ -15494,14 +15233,14 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtil
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
     return 0;
   } 
-  result = ur_rtde::RTDEUtility::getUInt32((std::vector< char > const &)*arg1,*arg2);
-  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  result = (uint32_t)ur_rtde::RTDEUtility::getUInt32((std::vector< char > const &)*arg1,*arg2);
+  jresult = (jlong)result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getUInt16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getUInt16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jint jresult = 0 ;
   std::vector< char > *arg1 = 0 ;
   uint32_t *arg2 = 0 ;
   uint16_t result;
@@ -15519,14 +15258,14 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtil
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
     return 0;
   } 
-  result = ur_rtde::RTDEUtility::getUInt16((std::vector< char > const &)*arg1,*arg2);
-  *(uint16_t **)&jresult = new uint16_t((const uint16_t &)result); 
+  result = (uint16_t)ur_rtde::RTDEUtility::getUInt16((std::vector< char > const &)*arg1,*arg2);
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getInt32(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getInt32(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jint jresult = 0 ;
   std::vector< char > *arg1 = 0 ;
   uint32_t *arg2 = 0 ;
   int32_t result;
@@ -15544,14 +15283,14 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtil
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
     return 0;
   } 
-  result = ur_rtde::RTDEUtility::getInt32((std::vector< char > const &)*arg1,*arg2);
-  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  result = (int32_t)ur_rtde::RTDEUtility::getInt32((std::vector< char > const &)*arg1,*arg2);
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getUInt64(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  jlong jresult = 0 ;
+SWIGEXPORT jobject JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getUInt64(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jobject jresult = 0 ;
   std::vector< char > *arg1 = 0 ;
   uint32_t *arg2 = 0 ;
   uint64_t result;
@@ -15569,8 +15308,25 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtil
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
     return 0;
   } 
-  result = ur_rtde::RTDEUtility::getUInt64((std::vector< char > const &)*arg1,*arg2);
-  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  result = (uint64_t)ur_rtde::RTDEUtility::getUInt64((std::vector< char > const &)*arg1,*arg2);
+  {
+    jbyteArray ba = jenv->NewByteArray(9);
+    jbyte* bae = jenv->GetByteArrayElements(ba, 0);
+    jclass clazz = jenv->FindClass("java/math/BigInteger");
+    jmethodID mid = jenv->GetMethodID(clazz, "<init>", "([B)V");
+    jobject bigint;
+    int i;
+    
+    bae[0] = 0;
+    for(i=1; i<9; i++ ) {
+      bae[i] = (jbyte)(result>>8*(8-i));
+    }
+    
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
+    bigint = jenv->NewObject(clazz, mid, ba);
+    jenv->DeleteLocalRef(ba);
+    jresult = bigint;
+  }
   return jresult;
 }
 
@@ -16476,27 +16232,21 @@ SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Rob
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1recipe_1id_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1recipe_1id_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t arg2 ;
-  std::uint8_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   if (arg1) (arg1)->recipe_id_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1recipe_1id_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1recipe_1id_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jshort jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t result;
   
@@ -16504,8 +16254,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->recipe_id_);
-  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  result = (std::uint8_t) ((arg1)->recipe_id_);
+  jresult = (jshort)result; 
   return jresult;
 }
 
@@ -16568,27 +16318,21 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1movec_1mode_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1movec_1mode_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::int32_t arg2 ;
-  std::int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::int32_t)jarg2; 
   if (arg1) (arg1)->movec_mode_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1movec_1mode_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1movec_1mode_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::int32_t result;
   
@@ -16596,33 +16340,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->movec_mode_);
-  *(std::int32_t **)&jresult = new std::int32_t((const std::int32_t &)result); 
+  result = (std::int32_t) ((arg1)->movec_mode_);
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1force_1mode_1type_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1force_1mode_1type_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::int32_t arg2 ;
-  std::int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::int32_t)jarg2; 
   if (arg1) (arg1)->force_mode_type_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1force_1mode_1type_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1force_1mode_1type_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::int32_t result;
   
@@ -16630,33 +16368,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->force_mode_type_);
-  *(std::int32_t **)&jresult = new std::int32_t((const std::int32_t &)result); 
+  result = (std::int32_t) ((arg1)->force_mode_type_);
+  jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t arg2 ;
-  std::uint8_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   if (arg1) (arg1)->std_digital_out_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jshort jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t result;
   
@@ -16664,33 +16396,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->std_digital_out_);
-  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  result = (std::uint8_t) ((arg1)->std_digital_out_);
+  jresult = (jshort)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t arg2 ;
-  std::uint8_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   if (arg1) (arg1)->std_digital_out_mask_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jshort jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t result;
   
@@ -16698,33 +16424,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->std_digital_out_mask_);
-  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  result = (std::uint8_t) ((arg1)->std_digital_out_mask_);
+  jresult = (jshort)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t arg2 ;
-  std::uint8_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   if (arg1) (arg1)->std_tool_out_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jshort jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t result;
   
@@ -16732,33 +16452,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->std_tool_out_);
-  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  result = (std::uint8_t) ((arg1)->std_tool_out_);
+  jresult = (jshort)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t arg2 ;
-  std::uint8_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   if (arg1) (arg1)->std_tool_out_mask_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jshort jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t result;
   
@@ -16766,33 +16480,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->std_tool_out_mask_);
-  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  result = (std::uint8_t) ((arg1)->std_tool_out_mask_);
+  jresult = (jshort)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t arg2 ;
-  std::uint8_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   if (arg1) (arg1)->std_analog_output_mask_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jshort jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t result;
   
@@ -16800,33 +16508,27 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->std_analog_output_mask_);
-  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  result = (std::uint8_t) ((arg1)->std_analog_output_mask_);
+  jresult = (jshort)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1type_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1type_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t arg2 ;
-  std::uint8_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::uint8_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint8_t)jarg2; 
   if (arg1) (arg1)->std_analog_output_type_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1type_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1type_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jshort jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint8_t result;
   
@@ -16834,8 +16536,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->std_analog_output_type_);
-  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  result = (std::uint8_t) ((arg1)->std_analog_output_type_);
+  jresult = (jshort)result; 
   return jresult;
 }
 
@@ -16896,27 +16598,21 @@ SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1speed_1slider_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1speed_1slider_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::int32_t arg2 ;
-  std::int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::int32_t)jarg2; 
   if (arg1) (arg1)->speed_slider_mask_ = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1speed_1slider_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1speed_1slider_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::int32_t result;
   
@@ -16924,8 +16620,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->speed_slider_mask_);
-  *(std::int32_t **)&jresult = new std::int32_t((const std::int32_t &)result); 
+  result = (std::int32_t) ((arg1)->speed_slider_mask_);
+  jresult = (jint)result; 
   return jresult;
 }
 
@@ -16961,18 +16657,12 @@ SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1
 SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1steps_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
   std::uint32_t arg2 ;
-  std::uint32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  argp2 = *(std::uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (std::uint32_t)jarg2; 
   if (arg1) (arg1)->steps_ = arg2;
 }
 
@@ -16986,8 +16676,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1Ro
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
-  result =  ((arg1)->steps_);
-  *(std::uint32_t **)&jresult = new std::uint32_t((const std::uint32_t &)result); 
+  result = (std::uint32_t) ((arg1)->steps_);
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -17275,20 +16965,18 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sen
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendAll_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jstring jarg3) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendAll_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2, jstring jarg3) {
   ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
   std::uint8_t *arg2 = 0 ;
   std::string arg3 ;
+  std::uint8_t temp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE **)&jarg1; 
-  arg2 = *(std::uint8_t **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::uint8_t const & reference is null");
-    return ;
-  } 
+  temp2 = (std::uint8_t)jarg2; 
+  arg2 = &temp2; 
   if(!jarg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
     return ;
@@ -17301,19 +16989,17 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sen
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendAll_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendAll_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
   std::uint8_t *arg2 = 0 ;
+  std::uint8_t temp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(ur_rtde::RTDE **)&jarg1; 
-  arg2 = *(std::uint8_t **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::uint8_t const & reference is null");
-    return ;
-  } 
+  temp2 = (std::uint8_t)jarg2; 
+  arg2 = &temp2; 
   (arg1)->sendAll((std::uint8_t const &)*arg2);
 }
 
@@ -17393,8 +17079,6 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1Scr
   uint32_t arg3 ;
   int arg4 ;
   bool arg5 ;
-  uint32_t *argp2 ;
-  uint32_t *argp3 ;
   ur_rtde::ScriptClient *result = 0 ;
   
   (void)jenv;
@@ -17407,18 +17091,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1Scr
   if (!arg1_pstr) return 0;
   (&arg1)->assign(arg1_pstr);
   jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return 0;
-  }
-  arg2 = *argp2; 
-  argp3 = *(uint32_t **)&jarg3; 
-  if (!argp3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return 0;
-  }
-  arg3 = *argp3; 
+  arg2 = (uint32_t)jarg2; 
+  arg3 = (uint32_t)jarg3; 
   arg4 = (int)jarg4; 
   arg5 = jarg5 ? true : false; 
   result = (ur_rtde::ScriptClient *)new ur_rtde::ScriptClient(arg1,arg2,arg3,arg4,arg5);
@@ -17433,8 +17107,6 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1Scr
   uint32_t arg2 ;
   uint32_t arg3 ;
   int arg4 ;
-  uint32_t *argp2 ;
-  uint32_t *argp3 ;
   ur_rtde::ScriptClient *result = 0 ;
   
   (void)jenv;
@@ -17447,18 +17119,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1Scr
   if (!arg1_pstr) return 0;
   (&arg1)->assign(arg1_pstr);
   jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return 0;
-  }
-  arg2 = *argp2; 
-  argp3 = *(uint32_t **)&jarg3; 
-  if (!argp3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return 0;
-  }
-  arg3 = *argp3; 
+  arg2 = (uint32_t)jarg2; 
+  arg3 = (uint32_t)jarg3; 
   arg4 = (int)jarg4; 
   result = (ur_rtde::ScriptClient *)new ur_rtde::ScriptClient(arg1,arg2,arg3,arg4);
   *(ur_rtde::ScriptClient **)&jresult = result; 
@@ -17471,8 +17133,6 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1Scr
   std::string arg1 ;
   uint32_t arg2 ;
   uint32_t arg3 ;
-  uint32_t *argp2 ;
-  uint32_t *argp3 ;
   ur_rtde::ScriptClient *result = 0 ;
   
   (void)jenv;
@@ -17485,18 +17145,8 @@ SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1Scr
   if (!arg1_pstr) return 0;
   (&arg1)->assign(arg1_pstr);
   jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return 0;
-  }
-  arg2 = *argp2; 
-  argp3 = *(uint32_t **)&jarg3; 
-  if (!argp3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return 0;
-  }
-  arg3 = *argp3; 
+  arg2 = (uint32_t)jarg2; 
+  arg3 = (uint32_t)jarg3; 
   result = (ur_rtde::ScriptClient *)new ur_rtde::ScriptClient(arg1,arg2,arg3);
   *(ur_rtde::ScriptClient **)&jresult = result; 
   return jresult;

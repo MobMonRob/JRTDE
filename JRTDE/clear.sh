@@ -8,10 +8,5 @@ git clean -d -f -X &> /dev/null
 #remove ignored tracked files and folders
 git ls-files -i --exclude-standard --directory -z| xargs -0 rm -r &> /dev/null
 
-echo "Linux64 cleared"
-
-../swig/clear.sh &> /dev/null
-../JRTDE/clear.sh &> /dev/null
-
-echo "Linux64 touched folders cleared"
+echo "JTRDE cleared"
 
