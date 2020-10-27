@@ -878,18 +878,18 @@ SWIGINTERN jint SWIG_VectorSize(size_t size) {
   return sz;
 }
 
-SWIGINTERN std::vector< unsigned int > *new_std_vector_Sl_unsigned_SS_int_Sg___SWIG_2(jint count,unsigned int const &value){
+SWIGINTERN std::vector< double > *new_std_vector_Sl_double_Sg___SWIG_2(jint count,double const &value){
         if (count < 0)
           throw std::out_of_range("vector count must be positive");
-        return new std::vector< unsigned int >(static_cast<std::vector< unsigned int >::size_type>(count), value);
+        return new std::vector< double >(static_cast<std::vector< double >::size_type>(count), value);
       }
-SWIGINTERN jint std_vector_Sl_unsigned_SS_int_Sg__doSize(std::vector< unsigned int > const *self){
+SWIGINTERN jint std_vector_Sl_double_Sg__doSize(std::vector< double > const *self){
         return SWIG_VectorSize(self->size());
       }
-SWIGINTERN void std_vector_Sl_unsigned_SS_int_Sg__doAdd__SWIG_0(std::vector< unsigned int > *self,std::vector< unsigned int >::value_type const &x){
+SWIGINTERN void std_vector_Sl_double_Sg__doAdd__SWIG_0(std::vector< double > *self,std::vector< double >::value_type const &x){
         self->push_back(x);
       }
-SWIGINTERN void std_vector_Sl_unsigned_SS_int_Sg__doAdd__SWIG_1(std::vector< unsigned int > *self,jint index,std::vector< unsigned int >::value_type const &x){
+SWIGINTERN void std_vector_Sl_double_Sg__doAdd__SWIG_1(std::vector< double > *self,jint index,std::vector< double >::value_type const &x){
         jint size = static_cast<jint>(self->size());
         if (0 <= index && index <= size) {
           self->insert(self->begin() + index, x);
@@ -897,34 +897,34 @@ SWIGINTERN void std_vector_Sl_unsigned_SS_int_Sg__doAdd__SWIG_1(std::vector< uns
           throw std::out_of_range("vector index out of range");
         }
       }
-SWIGINTERN std::vector< unsigned int >::value_type std_vector_Sl_unsigned_SS_int_Sg__doRemove(std::vector< unsigned int > *self,jint index){
+SWIGINTERN std::vector< double >::value_type std_vector_Sl_double_Sg__doRemove(std::vector< double > *self,jint index){
         jint size = static_cast<jint>(self->size());
         if (0 <= index && index < size) {
-          unsigned int const old_value = (*self)[index];
+          double const old_value = (*self)[index];
           self->erase(self->begin() + index);
           return old_value;
         } else {
           throw std::out_of_range("vector index out of range");
         }
       }
-SWIGINTERN std::vector< unsigned int >::value_type const &std_vector_Sl_unsigned_SS_int_Sg__doGet(std::vector< unsigned int > *self,jint index){
+SWIGINTERN std::vector< double >::value_type const &std_vector_Sl_double_Sg__doGet(std::vector< double > *self,jint index){
         jint size = static_cast<jint>(self->size());
         if (index >= 0 && index < size)
           return (*self)[index];
         else
           throw std::out_of_range("vector index out of range");
       }
-SWIGINTERN std::vector< unsigned int >::value_type std_vector_Sl_unsigned_SS_int_Sg__doSet(std::vector< unsigned int > *self,jint index,std::vector< unsigned int >::value_type const &val){
+SWIGINTERN std::vector< double >::value_type std_vector_Sl_double_Sg__doSet(std::vector< double > *self,jint index,std::vector< double >::value_type const &val){
         jint size = static_cast<jint>(self->size());
         if (index >= 0 && index < size) {
-          unsigned int const old_value = (*self)[index];
+          double const old_value = (*self)[index];
           (*self)[index] = val;
           return old_value;
         }
         else
           throw std::out_of_range("vector index out of range");
       }
-SWIGINTERN void std_vector_Sl_unsigned_SS_int_Sg__doRemoveRange(std::vector< unsigned int > *self,jint fromIndex,jint toIndex){
+SWIGINTERN void std_vector_Sl_double_Sg__doRemoveRange(std::vector< double > *self,jint fromIndex,jint toIndex){
         jint size = static_cast<jint>(self->size());
         if (0 <= fromIndex && fromIndex <= toIndex && toIndex <= size) {
           self->erase(self->begin() + fromIndex, self->begin() + toIndex);
@@ -932,18 +932,18 @@ SWIGINTERN void std_vector_Sl_unsigned_SS_int_Sg__doRemoveRange(std::vector< uns
           throw std::out_of_range("vector index out of range");
         }
       }
-SWIGINTERN std::vector< std::vector< unsigned char > > *new_std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg___SWIG_2(jint count,std::vector< unsigned char > const &value){
+SWIGINTERN std::vector< int > *new_std_vector_Sl_int_Sg___SWIG_2(jint count,int const &value){
         if (count < 0)
           throw std::out_of_range("vector count must be positive");
-        return new std::vector< std::vector< unsigned char > >(static_cast<std::vector< std::vector< unsigned char > >::size_type>(count), value);
+        return new std::vector< int >(static_cast<std::vector< int >::size_type>(count), value);
       }
-SWIGINTERN jint std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doSize(std::vector< std::vector< unsigned char > > const *self){
+SWIGINTERN jint std_vector_Sl_int_Sg__doSize(std::vector< int > const *self){
         return SWIG_VectorSize(self->size());
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doAdd__SWIG_0(std::vector< std::vector< unsigned char > > *self,std::vector< std::vector< unsigned char > >::value_type const &x){
+SWIGINTERN void std_vector_Sl_int_Sg__doAdd__SWIG_0(std::vector< int > *self,std::vector< int >::value_type const &x){
         self->push_back(x);
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doAdd__SWIG_1(std::vector< std::vector< unsigned char > > *self,jint index,std::vector< std::vector< unsigned char > >::value_type const &x){
+SWIGINTERN void std_vector_Sl_int_Sg__doAdd__SWIG_1(std::vector< int > *self,jint index,std::vector< int >::value_type const &x){
         jint size = static_cast<jint>(self->size());
         if (0 <= index && index <= size) {
           self->insert(self->begin() + index, x);
@@ -951,34 +951,34 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doAdd__SWIG
           throw std::out_of_range("vector index out of range");
         }
       }
-SWIGINTERN std::vector< std::vector< unsigned char > >::value_type std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doRemove(std::vector< std::vector< unsigned char > > *self,jint index){
+SWIGINTERN std::vector< int >::value_type std_vector_Sl_int_Sg__doRemove(std::vector< int > *self,jint index){
         jint size = static_cast<jint>(self->size());
         if (0 <= index && index < size) {
-          std::vector< unsigned char > const old_value = (*self)[index];
+          int const old_value = (*self)[index];
           self->erase(self->begin() + index);
           return old_value;
         } else {
           throw std::out_of_range("vector index out of range");
         }
       }
-SWIGINTERN std::vector< std::vector< unsigned char > >::value_type const &std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doGet(std::vector< std::vector< unsigned char > > *self,jint index){
+SWIGINTERN std::vector< int >::value_type const &std_vector_Sl_int_Sg__doGet(std::vector< int > *self,jint index){
         jint size = static_cast<jint>(self->size());
         if (index >= 0 && index < size)
           return (*self)[index];
         else
           throw std::out_of_range("vector index out of range");
       }
-SWIGINTERN std::vector< std::vector< unsigned char > >::value_type std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doSet(std::vector< std::vector< unsigned char > > *self,jint index,std::vector< std::vector< unsigned char > >::value_type const &val){
+SWIGINTERN std::vector< int >::value_type std_vector_Sl_int_Sg__doSet(std::vector< int > *self,jint index,std::vector< int >::value_type const &val){
         jint size = static_cast<jint>(self->size());
         if (index >= 0 && index < size) {
-          std::vector< unsigned char > const old_value = (*self)[index];
+          int const old_value = (*self)[index];
           (*self)[index] = val;
           return old_value;
         }
         else
           throw std::out_of_range("vector index out of range");
       }
-SWIGINTERN void std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doRemoveRange(std::vector< std::vector< unsigned char > > *self,jint fromIndex,jint toIndex){
+SWIGINTERN void std_vector_Sl_int_Sg__doRemoveRange(std::vector< int > *self,jint fromIndex,jint toIndex){
         jint size = static_cast<jint>(self->size());
         if (0 <= fromIndex && fromIndex <= toIndex && toIndex <= size) {
           self->erase(self->begin() + fromIndex, self->begin() + toIndex);
@@ -986,18 +986,18 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doRemoveRan
           throw std::out_of_range("vector index out of range");
         }
       }
-SWIGINTERN std::vector< unsigned char > *new_std_vector_Sl_unsigned_SS_char_Sg___SWIG_2(jint count,unsigned char const &value){
+SWIGINTERN std::vector< std::vector< double > > *new_std_vector_Sl_std_vector_Sl_double_Sg__Sg___SWIG_2(jint count,std::vector< double > const &value){
         if (count < 0)
           throw std::out_of_range("vector count must be positive");
-        return new std::vector< unsigned char >(static_cast<std::vector< unsigned char >::size_type>(count), value);
+        return new std::vector< std::vector< double > >(static_cast<std::vector< std::vector< double > >::size_type>(count), value);
       }
-SWIGINTERN jint std_vector_Sl_unsigned_SS_char_Sg__doSize(std::vector< unsigned char > const *self){
+SWIGINTERN jint std_vector_Sl_std_vector_Sl_double_Sg__Sg__doSize(std::vector< std::vector< double > > const *self){
         return SWIG_VectorSize(self->size());
       }
-SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__doAdd__SWIG_0(std::vector< unsigned char > *self,std::vector< unsigned char >::value_type const &x){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_double_Sg__Sg__doAdd__SWIG_0(std::vector< std::vector< double > > *self,std::vector< std::vector< double > >::value_type const &x){
         self->push_back(x);
       }
-SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__doAdd__SWIG_1(std::vector< unsigned char > *self,jint index,std::vector< unsigned char >::value_type const &x){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_double_Sg__Sg__doAdd__SWIG_1(std::vector< std::vector< double > > *self,jint index,std::vector< std::vector< double > >::value_type const &x){
         jint size = static_cast<jint>(self->size());
         if (0 <= index && index <= size) {
           self->insert(self->begin() + index, x);
@@ -1005,34 +1005,142 @@ SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__doAdd__SWIG_1(std::vector< un
           throw std::out_of_range("vector index out of range");
         }
       }
-SWIGINTERN std::vector< unsigned char >::value_type std_vector_Sl_unsigned_SS_char_Sg__doRemove(std::vector< unsigned char > *self,jint index){
+SWIGINTERN std::vector< std::vector< double > >::value_type std_vector_Sl_std_vector_Sl_double_Sg__Sg__doRemove(std::vector< std::vector< double > > *self,jint index){
         jint size = static_cast<jint>(self->size());
         if (0 <= index && index < size) {
-          unsigned char const old_value = (*self)[index];
+          std::vector< double > const old_value = (*self)[index];
           self->erase(self->begin() + index);
           return old_value;
         } else {
           throw std::out_of_range("vector index out of range");
         }
       }
-SWIGINTERN std::vector< unsigned char >::value_type const &std_vector_Sl_unsigned_SS_char_Sg__doGet(std::vector< unsigned char > *self,jint index){
+SWIGINTERN std::vector< std::vector< double > >::value_type const &std_vector_Sl_std_vector_Sl_double_Sg__Sg__doGet(std::vector< std::vector< double > > *self,jint index){
         jint size = static_cast<jint>(self->size());
         if (index >= 0 && index < size)
           return (*self)[index];
         else
           throw std::out_of_range("vector index out of range");
       }
-SWIGINTERN std::vector< unsigned char >::value_type std_vector_Sl_unsigned_SS_char_Sg__doSet(std::vector< unsigned char > *self,jint index,std::vector< unsigned char >::value_type const &val){
+SWIGINTERN std::vector< std::vector< double > >::value_type std_vector_Sl_std_vector_Sl_double_Sg__Sg__doSet(std::vector< std::vector< double > > *self,jint index,std::vector< std::vector< double > >::value_type const &val){
         jint size = static_cast<jint>(self->size());
         if (index >= 0 && index < size) {
-          unsigned char const old_value = (*self)[index];
+          std::vector< double > const old_value = (*self)[index];
           (*self)[index] = val;
           return old_value;
         }
         else
           throw std::out_of_range("vector index out of range");
       }
-SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__doRemoveRange(std::vector< unsigned char > *self,jint fromIndex,jint toIndex){
+SWIGINTERN void std_vector_Sl_std_vector_Sl_double_Sg__Sg__doRemoveRange(std::vector< std::vector< double > > *self,jint fromIndex,jint toIndex){
+        jint size = static_cast<jint>(self->size());
+        if (0 <= fromIndex && fromIndex <= toIndex && toIndex <= size) {
+          self->erase(self->begin() + fromIndex, self->begin() + toIndex);
+        } else {
+          throw std::out_of_range("vector index out of range");
+        }
+      }
+SWIGINTERN std::vector< std::string > *new_std_vector_Sl_std_string_Sg___SWIG_2(jint count,std::string const &value){
+        if (count < 0)
+          throw std::out_of_range("vector count must be positive");
+        return new std::vector< std::string >(static_cast<std::vector< std::string >::size_type>(count), value);
+      }
+SWIGINTERN jint std_vector_Sl_std_string_Sg__doSize(std::vector< std::string > const *self){
+        return SWIG_VectorSize(self->size());
+      }
+SWIGINTERN void std_vector_Sl_std_string_Sg__doAdd__SWIG_0(std::vector< std::string > *self,std::vector< std::string >::value_type const &x){
+        self->push_back(x);
+      }
+SWIGINTERN void std_vector_Sl_std_string_Sg__doAdd__SWIG_1(std::vector< std::string > *self,jint index,std::vector< std::string >::value_type const &x){
+        jint size = static_cast<jint>(self->size());
+        if (0 <= index && index <= size) {
+          self->insert(self->begin() + index, x);
+        } else {
+          throw std::out_of_range("vector index out of range");
+        }
+      }
+SWIGINTERN std::vector< std::string >::value_type std_vector_Sl_std_string_Sg__doRemove(std::vector< std::string > *self,jint index){
+        jint size = static_cast<jint>(self->size());
+        if (0 <= index && index < size) {
+          std::string const old_value = (*self)[index];
+          self->erase(self->begin() + index);
+          return old_value;
+        } else {
+          throw std::out_of_range("vector index out of range");
+        }
+      }
+SWIGINTERN std::vector< std::string >::value_type const &std_vector_Sl_std_string_Sg__doGet(std::vector< std::string > *self,jint index){
+        jint size = static_cast<jint>(self->size());
+        if (index >= 0 && index < size)
+          return (*self)[index];
+        else
+          throw std::out_of_range("vector index out of range");
+      }
+SWIGINTERN std::vector< std::string >::value_type std_vector_Sl_std_string_Sg__doSet(std::vector< std::string > *self,jint index,std::vector< std::string >::value_type const &val){
+        jint size = static_cast<jint>(self->size());
+        if (index >= 0 && index < size) {
+          std::string const old_value = (*self)[index];
+          (*self)[index] = val;
+          return old_value;
+        }
+        else
+          throw std::out_of_range("vector index out of range");
+      }
+SWIGINTERN void std_vector_Sl_std_string_Sg__doRemoveRange(std::vector< std::string > *self,jint fromIndex,jint toIndex){
+        jint size = static_cast<jint>(self->size());
+        if (0 <= fromIndex && fromIndex <= toIndex && toIndex <= size) {
+          self->erase(self->begin() + fromIndex, self->begin() + toIndex);
+        } else {
+          throw std::out_of_range("vector index out of range");
+        }
+      }
+SWIGINTERN std::vector< char > *new_std_vector_Sl_char_Sg___SWIG_2(jint count,char const &value){
+        if (count < 0)
+          throw std::out_of_range("vector count must be positive");
+        return new std::vector< char >(static_cast<std::vector< char >::size_type>(count), value);
+      }
+SWIGINTERN jint std_vector_Sl_char_Sg__doSize(std::vector< char > const *self){
+        return SWIG_VectorSize(self->size());
+      }
+SWIGINTERN void std_vector_Sl_char_Sg__doAdd__SWIG_0(std::vector< char > *self,std::vector< char >::value_type const &x){
+        self->push_back(x);
+      }
+SWIGINTERN void std_vector_Sl_char_Sg__doAdd__SWIG_1(std::vector< char > *self,jint index,std::vector< char >::value_type const &x){
+        jint size = static_cast<jint>(self->size());
+        if (0 <= index && index <= size) {
+          self->insert(self->begin() + index, x);
+        } else {
+          throw std::out_of_range("vector index out of range");
+        }
+      }
+SWIGINTERN std::vector< char >::value_type std_vector_Sl_char_Sg__doRemove(std::vector< char > *self,jint index){
+        jint size = static_cast<jint>(self->size());
+        if (0 <= index && index < size) {
+          char const old_value = (*self)[index];
+          self->erase(self->begin() + index);
+          return old_value;
+        } else {
+          throw std::out_of_range("vector index out of range");
+        }
+      }
+SWIGINTERN std::vector< char >::value_type const &std_vector_Sl_char_Sg__doGet(std::vector< char > *self,jint index){
+        jint size = static_cast<jint>(self->size());
+        if (index >= 0 && index < size)
+          return (*self)[index];
+        else
+          throw std::out_of_range("vector index out of range");
+      }
+SWIGINTERN std::vector< char >::value_type std_vector_Sl_char_Sg__doSet(std::vector< char > *self,jint index,std::vector< char >::value_type const &val){
+        jint size = static_cast<jint>(self->size());
+        if (index >= 0 && index < size) {
+          char const old_value = (*self)[index];
+          (*self)[index] = val;
+          return old_value;
+        }
+        else
+          throw std::out_of_range("vector index out of range");
+      }
+SWIGINTERN void std_vector_Sl_char_Sg__doRemoveRange(std::vector< char > *self,jint fromIndex,jint toIndex){
         jint size = static_cast<jint>(self->size());
         if (0 <= fromIndex && fromIndex <= toIndex && toIndex <= size) {
           self->erase(self->begin() + fromIndex, self->begin() + toIndex);
@@ -1045,61 +1153,61 @@ SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__doRemoveRange(std::vector< un
 extern "C" {
 #endif
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorUint_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorDouble_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
-  std::vector< unsigned int > *result = 0 ;
+  std::vector< double > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  result = (std::vector< unsigned int > *)new std::vector< unsigned int >();
-  *(std::vector< unsigned int > **)&jresult = result; 
+  result = (std::vector< double > *)new std::vector< double >();
+  *(std::vector< double > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorUint_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorDouble_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
-  std::vector< unsigned int > *arg1 = 0 ;
-  std::vector< unsigned int > *result = 0 ;
+  std::vector< double > *arg1 = 0 ;
+  std::vector< double > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1;
+  arg1 = *(std::vector< double > **)&jarg1;
   if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< unsigned int > const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
     return 0;
   } 
-  result = (std::vector< unsigned int > *)new std::vector< unsigned int >((std::vector< unsigned int > const &)*arg1);
-  *(std::vector< unsigned int > **)&jresult = result; 
+  result = (std::vector< double > *)new std::vector< double >((std::vector< double > const &)*arg1);
+  *(std::vector< double > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
-  std::vector< unsigned int >::size_type result;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  std::vector< double >::size_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
-  result = ((std::vector< unsigned int > const *)arg1)->capacity();
+  arg1 = *(std::vector< double > **)&jarg1; 
+  result = ((std::vector< double > const *)arg1)->capacity();
   jresult = (jlong)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
-  std::vector< unsigned int >::size_type arg2 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  std::vector< double >::size_type arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
-  arg2 = (std::vector< unsigned int >::size_type)jarg2; 
+  arg1 = *(std::vector< double > **)&jarg1; 
+  arg2 = (std::vector< double >::size_type)jarg2; 
   try {
     (arg1)->reserve(arg2);
   } catch(std::length_error &_e) {
@@ -1109,66 +1217,66 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
-  result = (bool)((std::vector< unsigned int > const *)arg1)->empty();
+  arg1 = *(std::vector< double > **)&jarg1; 
+  result = (bool)((std::vector< double > const *)arg1)->empty();
   jresult = (jboolean)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
+  arg1 = *(std::vector< double > **)&jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorUint_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorDouble_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jdouble jarg2) {
   jlong jresult = 0 ;
   jint arg1 ;
-  unsigned int *arg2 = 0 ;
-  unsigned int temp2 ;
-  std::vector< unsigned int > *result = 0 ;
+  double *arg2 = 0 ;
+  double temp2 ;
+  std::vector< double > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   arg1 = jarg1; 
-  temp2 = (unsigned int)jarg2; 
+  temp2 = (double)jarg2; 
   arg2 = &temp2; 
   try {
-    result = (std::vector< unsigned int > *)new_std_vector_Sl_unsigned_SS_int_Sg___SWIG_2(arg1,(unsigned int const &)*arg2);
+    result = (std::vector< double > *)new_std_vector_Sl_double_Sg___SWIG_2(arg1,(double const &)*arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  *(std::vector< unsigned int > **)&jresult = result; 
+  *(std::vector< double > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   jint result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
+  arg1 = *(std::vector< double > **)&jarg1; 
   try {
-    result = std_vector_Sl_unsigned_SS_int_Sg__doSize((std::vector< unsigned int > const *)arg1);
+    result = std_vector_Sl_double_Sg__doSize((std::vector< double > const *)arg1);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
@@ -1178,36 +1286,36 @@ SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
-  std::vector< unsigned int >::value_type *arg2 = 0 ;
-  std::vector< unsigned int >::value_type temp2 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  std::vector< double >::value_type *arg2 = 0 ;
+  std::vector< double >::value_type temp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
-  temp2 = (std::vector< unsigned int >::value_type)jarg2; 
+  arg1 = *(std::vector< double > **)&jarg1; 
+  temp2 = (std::vector< double >::value_type)jarg2; 
   arg2 = &temp2; 
-  std_vector_Sl_unsigned_SS_int_Sg__doAdd__SWIG_0(arg1,(unsigned int const &)*arg2);
+  std_vector_Sl_double_Sg__doAdd__SWIG_0(arg1,(double const &)*arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jdouble jarg3) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   jint arg2 ;
-  std::vector< unsigned int >::value_type *arg3 = 0 ;
-  std::vector< unsigned int >::value_type temp3 ;
+  std::vector< double >::value_type *arg3 = 0 ;
+  std::vector< double >::value_type temp3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
+  arg1 = *(std::vector< double > **)&jarg1; 
   arg2 = jarg2; 
-  temp3 = (std::vector< unsigned int >::value_type)jarg3; 
+  temp3 = (std::vector< double >::value_type)jarg3; 
   arg3 = &temp3; 
   try {
-    std_vector_Sl_unsigned_SS_int_Sg__doAdd__SWIG_1(arg1,arg2,(unsigned int const &)*arg3);
+    std_vector_Sl_double_Sg__doAdd__SWIG_1(arg1,arg2,(double const &)*arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return ;
@@ -1215,89 +1323,89 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
-  jlong jresult = 0 ;
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jdouble jresult = 0 ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   jint arg2 ;
-  std::vector< unsigned int >::value_type result;
+  std::vector< double >::value_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
+  arg1 = *(std::vector< double > **)&jarg1; 
   arg2 = jarg2; 
   try {
-    result = (std::vector< unsigned int >::value_type)std_vector_Sl_unsigned_SS_int_Sg__doRemove(arg1,arg2);
+    result = (std::vector< double >::value_type)std_vector_Sl_double_Sg__doRemove(arg1,arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  jresult = (jlong)result; 
+  jresult = (jdouble)result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
-  jlong jresult = 0 ;
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jdouble jresult = 0 ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   jint arg2 ;
-  std::vector< unsigned int >::value_type *result = 0 ;
+  std::vector< double >::value_type *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
+  arg1 = *(std::vector< double > **)&jarg1; 
   arg2 = jarg2; 
   try {
-    result = (std::vector< unsigned int >::value_type *) &std_vector_Sl_unsigned_SS_int_Sg__doGet(arg1,arg2);
+    result = (std::vector< double >::value_type *) &std_vector_Sl_double_Sg__doGet(arg1,arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  jresult = (jlong)*result; 
+  jresult = (jdouble)*result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
-  jlong jresult = 0 ;
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jdouble jarg3) {
+  jdouble jresult = 0 ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   jint arg2 ;
-  std::vector< unsigned int >::value_type *arg3 = 0 ;
-  std::vector< unsigned int >::value_type temp3 ;
-  std::vector< unsigned int >::value_type result;
+  std::vector< double >::value_type *arg3 = 0 ;
+  std::vector< double >::value_type temp3 ;
+  std::vector< double >::value_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
+  arg1 = *(std::vector< double > **)&jarg1; 
   arg2 = jarg2; 
-  temp3 = (std::vector< unsigned int >::value_type)jarg3; 
+  temp3 = (std::vector< double >::value_type)jarg3; 
   arg3 = &temp3; 
   try {
-    result = (std::vector< unsigned int >::value_type)std_vector_Sl_unsigned_SS_int_Sg__doSet(arg1,arg2,(unsigned int const &)*arg3);
+    result = (std::vector< double >::value_type)std_vector_Sl_double_Sg__doSet(arg1,arg2,(double const &)*arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  jresult = (jlong)result; 
+  jresult = (jdouble)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUint_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorDouble_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   jint arg2 ;
   jint arg3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
+  arg1 = *(std::vector< double > **)&jarg1; 
   arg2 = jarg2; 
   arg3 = jarg3; 
   try {
-    std_vector_Sl_unsigned_SS_int_Sg__doRemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_double_Sg__doRemoveRange(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return ;
@@ -1305,71 +1413,71 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_delete_1VectorUint(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  std::vector< unsigned int > *arg1 = (std::vector< unsigned int > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1VectorDouble(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::vector< unsigned int > **)&jarg1; 
+  arg1 = *(std::vector< double > **)&jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorVectorUchar_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorInt_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
-  std::vector< std::vector< unsigned char > > *result = 0 ;
+  std::vector< int > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  result = (std::vector< std::vector< unsigned char > > *)new std::vector< std::vector< unsigned char > >();
-  *(std::vector< std::vector< unsigned char > > **)&jresult = result; 
+  result = (std::vector< int > *)new std::vector< int >();
+  *(std::vector< int > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorVectorUchar_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorInt_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
-  std::vector< std::vector< unsigned char > > *arg1 = 0 ;
-  std::vector< std::vector< unsigned char > > *result = 0 ;
+  std::vector< int > *arg1 = 0 ;
+  std::vector< int > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1;
+  arg1 = *(std::vector< int > **)&jarg1;
   if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< unsigned char > > const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< int > const & reference is null");
     return 0;
   } 
-  result = (std::vector< std::vector< unsigned char > > *)new std::vector< std::vector< unsigned char > >((std::vector< std::vector< unsigned char > > const &)*arg1);
-  *(std::vector< std::vector< unsigned char > > **)&jresult = result; 
+  result = (std::vector< int > *)new std::vector< int >((std::vector< int > const &)*arg1);
+  *(std::vector< int > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
-  std::vector< std::vector< unsigned char > >::size_type result;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
-  result = ((std::vector< std::vector< unsigned char > > const *)arg1)->capacity();
+  arg1 = *(std::vector< int > **)&jarg1; 
+  result = ((std::vector< int > const *)arg1)->capacity();
   jresult = (jlong)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
-  std::vector< std::vector< unsigned char > >::size_type arg2 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
-  arg2 = (std::vector< std::vector< unsigned char > >::size_type)jarg2; 
+  arg1 = *(std::vector< int > **)&jarg1; 
+  arg2 = (std::vector< int >::size_type)jarg2; 
   try {
     (arg1)->reserve(arg2);
   } catch(std::length_error &_e) {
@@ -1379,69 +1487,339 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
-  result = (bool)((std::vector< std::vector< unsigned char > > const *)arg1)->empty();
+  arg1 = *(std::vector< int > **)&jarg1; 
+  result = (bool)((std::vector< int > const *)arg1)->empty();
   jresult = (jboolean)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
+  arg1 = *(std::vector< int > **)&jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorVectorUchar_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorInt_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jint jarg2) {
   jlong jresult = 0 ;
   jint arg1 ;
-  std::vector< unsigned char > *arg2 = 0 ;
-  std::vector< std::vector< unsigned char > > *result = 0 ;
+  int *arg2 = 0 ;
+  int temp2 ;
+  std::vector< int > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = jarg1; 
+  temp2 = (int)jarg2; 
+  arg2 = &temp2; 
+  try {
+    result = (std::vector< int > *)new_std_vector_Sl_int_Sg___SWIG_2(arg1,(int const &)*arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  *(std::vector< int > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  jint result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< int > **)&jarg1; 
+  try {
+    result = std_vector_Sl_int_Sg__doSize((std::vector< int > const *)arg1);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::value_type *arg2 = 0 ;
+  std::vector< int >::value_type temp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< int > **)&jarg1; 
+  temp2 = (std::vector< int >::value_type)jarg2; 
+  arg2 = &temp2; 
+  std_vector_Sl_int_Sg__doAdd__SWIG_0(arg1,(int const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  jint arg2 ;
+  std::vector< int >::value_type *arg3 = 0 ;
+  std::vector< int >::value_type temp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< int > **)&jarg1; 
+  arg2 = jarg2; 
+  temp3 = (std::vector< int >::value_type)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_vector_Sl_int_Sg__doAdd__SWIG_1(arg1,arg2,(int const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jint jresult = 0 ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  jint arg2 ;
+  std::vector< int >::value_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< int > **)&jarg1; 
+  arg2 = jarg2; 
+  try {
+    result = (std::vector< int >::value_type)std_vector_Sl_int_Sg__doRemove(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jint jresult = 0 ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  jint arg2 ;
+  std::vector< int >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< int > **)&jarg1; 
+  arg2 = jarg2; 
+  try {
+    result = (std::vector< int >::value_type *) &std_vector_Sl_int_Sg__doGet(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  jresult = (jint)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+  jint jresult = 0 ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  jint arg2 ;
+  std::vector< int >::value_type *arg3 = 0 ;
+  std::vector< int >::value_type temp3 ;
+  std::vector< int >::value_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< int > **)&jarg1; 
+  arg2 = jarg2; 
+  temp3 = (std::vector< int >::value_type)jarg3; 
+  arg3 = &temp3; 
+  try {
+    result = (std::vector< int >::value_type)std_vector_Sl_int_Sg__doSet(arg1,arg2,(int const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorInt_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  jint arg2 ;
+  jint arg3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< int > **)&jarg1; 
+  arg2 = jarg2; 
+  arg3 = jarg3; 
+  try {
+    std_vector_Sl_int_Sg__doRemoveRange(arg1,arg2,arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1VectorInt(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< int > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorVectorDouble_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< std::vector< double > > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< std::vector< double > > *)new std::vector< std::vector< double > >();
+  *(std::vector< std::vector< double > > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorVectorDouble_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< std::vector< double > > *arg1 = 0 ;
+  std::vector< std::vector< double > > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< double > > const & reference is null");
+    return 0;
+  } 
+  result = (std::vector< std::vector< double > > *)new std::vector< std::vector< double > >((std::vector< std::vector< double > > const &)*arg1);
+  *(std::vector< std::vector< double > > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
+  std::vector< std::vector< double > >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
+  result = ((std::vector< std::vector< double > > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
+  std::vector< std::vector< double > >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
+  arg2 = (std::vector< std::vector< double > >::size_type)jarg2; 
+  try {
+    (arg1)->reserve(arg2);
+  } catch(std::length_error &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
+  result = (bool)((std::vector< std::vector< double > > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorVectorDouble_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
+  jlong jresult = 0 ;
+  jint arg1 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< std::vector< double > > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg2_;
   arg1 = jarg1; 
-  arg2 = *(std::vector< unsigned char > **)&jarg2;
+  arg2 = *(std::vector< double > **)&jarg2;
   if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< unsigned char > const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
     return 0;
   } 
   try {
-    result = (std::vector< std::vector< unsigned char > > *)new_std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg___SWIG_2(arg1,(std::vector< unsigned char > const &)*arg2);
+    result = (std::vector< std::vector< double > > *)new_std_vector_Sl_std_vector_Sl_double_Sg__Sg___SWIG_2(arg1,(std::vector< double > const &)*arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  *(std::vector< std::vector< unsigned char > > **)&jresult = result; 
+  *(std::vector< std::vector< double > > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
   jint result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
   try {
-    result = std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doSize((std::vector< std::vector< unsigned char > > const *)arg1);
+    result = std_vector_Sl_std_vector_Sl_double_Sg__Sg__doSize((std::vector< std::vector< double > > const *)arg1);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
@@ -1451,42 +1829,42 @@ SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
-  std::vector< std::vector< unsigned char > >::value_type *arg2 = 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
+  std::vector< std::vector< double > >::value_type *arg2 = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg2_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
-  arg2 = *(std::vector< std::vector< unsigned char > >::value_type **)&jarg2;
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
+  arg2 = *(std::vector< std::vector< double > >::value_type **)&jarg2;
   if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< unsigned char > >::value_type const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< double > >::value_type const & reference is null");
     return ;
   } 
-  std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doAdd__SWIG_0(arg1,(std::vector< unsigned char > const &)*arg2);
+  std_vector_Sl_std_vector_Sl_double_Sg__Sg__doAdd__SWIG_0(arg1,(std::vector< double > const &)*arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
   jint arg2 ;
-  std::vector< std::vector< unsigned char > >::value_type *arg3 = 0 ;
+  std::vector< std::vector< double > >::value_type *arg3 = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg3_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
   arg2 = jarg2; 
-  arg3 = *(std::vector< std::vector< unsigned char > >::value_type **)&jarg3;
+  arg3 = *(std::vector< std::vector< double > >::value_type **)&jarg3;
   if (!arg3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< unsigned char > >::value_type const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< double > >::value_type const & reference is null");
     return ;
   } 
   try {
-    std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doAdd__SWIG_1(arg1,arg2,(std::vector< unsigned char > const &)*arg3);
+    std_vector_Sl_std_vector_Sl_double_Sg__Sg__doAdd__SWIG_1(arg1,arg2,(std::vector< double > const &)*arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return ;
@@ -1494,92 +1872,92 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
   jint arg2 ;
-  std::vector< std::vector< unsigned char > >::value_type result;
+  std::vector< std::vector< double > >::value_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
   arg2 = jarg2; 
   try {
-    result = std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doRemove(arg1,arg2);
+    result = std_vector_Sl_std_vector_Sl_double_Sg__Sg__doRemove(arg1,arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  *(std::vector< std::vector< unsigned char > >::value_type **)&jresult = new std::vector< std::vector< unsigned char > >::value_type((const std::vector< std::vector< unsigned char > >::value_type &)result); 
+  *(std::vector< std::vector< double > >::value_type **)&jresult = new std::vector< std::vector< double > >::value_type((const std::vector< std::vector< double > >::value_type &)result); 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
   jint arg2 ;
-  std::vector< std::vector< unsigned char > >::value_type *result = 0 ;
+  std::vector< std::vector< double > >::value_type *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
   arg2 = jarg2; 
   try {
-    result = (std::vector< std::vector< unsigned char > >::value_type *) &std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doGet(arg1,arg2);
+    result = (std::vector< std::vector< double > >::value_type *) &std_vector_Sl_std_vector_Sl_double_Sg__Sg__doGet(arg1,arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  *(std::vector< std::vector< unsigned char > >::value_type **)&jresult = result; 
+  *(std::vector< std::vector< double > >::value_type **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
   jint arg2 ;
-  std::vector< std::vector< unsigned char > >::value_type *arg3 = 0 ;
-  std::vector< std::vector< unsigned char > >::value_type result;
+  std::vector< std::vector< double > >::value_type *arg3 = 0 ;
+  std::vector< std::vector< double > >::value_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg3_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
   arg2 = jarg2; 
-  arg3 = *(std::vector< std::vector< unsigned char > >::value_type **)&jarg3;
+  arg3 = *(std::vector< std::vector< double > >::value_type **)&jarg3;
   if (!arg3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< unsigned char > >::value_type const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< double > >::value_type const & reference is null");
     return 0;
   } 
   try {
-    result = std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doSet(arg1,arg2,(std::vector< unsigned char > const &)*arg3);
+    result = std_vector_Sl_std_vector_Sl_double_Sg__Sg__doSet(arg1,arg2,(std::vector< double > const &)*arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  *(std::vector< std::vector< unsigned char > >::value_type **)&jresult = new std::vector< std::vector< unsigned char > >::value_type((const std::vector< std::vector< unsigned char > >::value_type &)result); 
+  *(std::vector< std::vector< double > >::value_type **)&jresult = new std::vector< std::vector< double > >::value_type((const std::vector< std::vector< double > >::value_type &)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorVectorUchar_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorVectorDouble_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
   jint arg2 ;
   jint arg3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
   arg2 = jarg2; 
   arg3 = jarg3; 
   try {
-    std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__doRemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_std_vector_Sl_double_Sg__Sg__doRemoveRange(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return ;
@@ -1587,71 +1965,71 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_delete_1VectorVectorUchar(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  std::vector< std::vector< unsigned char > > *arg1 = (std::vector< std::vector< unsigned char > > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1VectorVectorDouble(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< std::vector< double > > *arg1 = (std::vector< std::vector< double > > *) 0 ;
   
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::vector< std::vector< unsigned char > > **)&jarg1; 
+  arg1 = *(std::vector< std::vector< double > > **)&jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorUchar_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorString_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
-  std::vector< unsigned char > *result = 0 ;
+  std::vector< std::string > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  result = (std::vector< unsigned char > *)new std::vector< unsigned char >();
-  *(std::vector< unsigned char > **)&jresult = result; 
+  result = (std::vector< std::string > *)new std::vector< std::string >();
+  *(std::vector< std::string > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorUchar_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorString_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
-  std::vector< unsigned char > *arg1 = 0 ;
-  std::vector< unsigned char > *result = 0 ;
+  std::vector< std::string > *arg1 = 0 ;
+  std::vector< std::string > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1;
+  arg1 = *(std::vector< std::string > **)&jarg1;
   if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< unsigned char > const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::string > const & reference is null");
     return 0;
   } 
-  result = (std::vector< unsigned char > *)new std::vector< unsigned char >((std::vector< unsigned char > const &)*arg1);
-  *(std::vector< unsigned char > **)&jresult = result; 
+  result = (std::vector< std::string > *)new std::vector< std::string >((std::vector< std::string > const &)*arg1);
+  *(std::vector< std::string > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
-  std::vector< unsigned char >::size_type result;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  std::vector< std::string >::size_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
-  result = ((std::vector< unsigned char > const *)arg1)->capacity();
+  arg1 = *(std::vector< std::string > **)&jarg1; 
+  result = ((std::vector< std::string > const *)arg1)->capacity();
   jresult = (jlong)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
-  std::vector< unsigned char >::size_type arg2 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  std::vector< std::string >::size_type arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
-  arg2 = (std::vector< unsigned char >::size_type)jarg2; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
+  arg2 = (std::vector< std::string >::size_type)jarg2; 
   try {
     (arg1)->reserve(arg2);
   } catch(std::length_error &_e) {
@@ -1661,66 +2039,72 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
-  result = (bool)((std::vector< unsigned char > const *)arg1)->empty();
+  arg1 = *(std::vector< std::string > **)&jarg1; 
+  result = (bool)((std::vector< std::string > const *)arg1)->empty();
   jresult = (jboolean)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1VectorUchar_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorString_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jstring jarg2) {
   jlong jresult = 0 ;
   jint arg1 ;
-  unsigned char *arg2 = 0 ;
-  unsigned char temp2 ;
-  std::vector< unsigned char > *result = 0 ;
+  std::string *arg2 = 0 ;
+  std::vector< std::string > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   arg1 = jarg1; 
-  temp2 = (unsigned char)jarg2; 
-  arg2 = &temp2; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
   try {
-    result = (std::vector< unsigned char > *)new_std_vector_Sl_unsigned_SS_char_Sg___SWIG_2(arg1,(unsigned char const &)*arg2);
+    result = (std::vector< std::string > *)new_std_vector_Sl_std_string_Sg___SWIG_2(arg1,(std::string const &)*arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  *(std::vector< unsigned char > **)&jresult = result; 
+  *(std::vector< std::string > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   jint result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
   try {
-    result = std_vector_Sl_unsigned_SS_char_Sg__doSize((std::vector< unsigned char > const *)arg1);
+    result = std_vector_Sl_std_string_Sg__doSize((std::vector< std::string > const *)arg1);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
@@ -1730,36 +2114,48 @@ SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
-  std::vector< unsigned char >::value_type *arg2 = 0 ;
-  std::vector< unsigned char >::value_type temp2 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
+  std::vector< std::string >::value_type *arg2 = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
-  temp2 = (std::vector< unsigned char >::value_type)jarg2; 
-  arg2 = &temp2; 
-  std_vector_Sl_unsigned_SS_char_Sg__doAdd__SWIG_0(arg1,(unsigned char const &)*arg2);
+  arg1 = *(std::vector< std::string > **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::vector< std::string >::value_type arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  std_vector_Sl_std_string_Sg__doAdd__SWIG_0(arg1,(std::string const &)*arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jshort jarg3) {
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jstring jarg3) {
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   jint arg2 ;
-  std::vector< unsigned char >::value_type *arg3 = 0 ;
-  std::vector< unsigned char >::value_type temp3 ;
+  std::vector< std::string >::value_type *arg3 = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
   arg2 = jarg2; 
-  temp3 = (std::vector< unsigned char >::value_type)jarg3; 
-  arg3 = &temp3; 
+  if(!jarg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg3_pstr = (const char *)jenv->GetStringUTFChars(jarg3, 0); 
+  if (!arg3_pstr) return ;
+  std::vector< std::string >::value_type arg3_str(arg3_pstr);
+  arg3 = &arg3_str;
+  jenv->ReleaseStringUTFChars(jarg3, arg3_pstr); 
   try {
-    std_vector_Sl_unsigned_SS_char_Sg__doAdd__SWIG_1(arg1,arg2,(unsigned char const &)*arg3);
+    std_vector_Sl_std_string_Sg__doAdd__SWIG_1(arg1,arg2,(std::string const &)*arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return ;
@@ -1767,89 +2163,95 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
-  jshort jresult = 0 ;
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jstring jresult = 0 ;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   jint arg2 ;
-  std::vector< unsigned char >::value_type result;
+  std::vector< std::string >::value_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
   arg2 = jarg2; 
   try {
-    result = (std::vector< unsigned char >::value_type)std_vector_Sl_unsigned_SS_char_Sg__doRemove(arg1,arg2);
+    result = std_vector_Sl_std_string_Sg__doRemove(arg1,arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  jresult = (jshort)result; 
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
   return jresult;
 }
 
 
-SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
-  jshort jresult = 0 ;
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jstring jresult = 0 ;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   jint arg2 ;
-  std::vector< unsigned char >::value_type *result = 0 ;
+  std::vector< std::string >::value_type *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
   arg2 = jarg2; 
   try {
-    result = (std::vector< unsigned char >::value_type *) &std_vector_Sl_unsigned_SS_char_Sg__doGet(arg1,arg2);
+    result = (std::vector< std::string >::value_type *) &std_vector_Sl_std_string_Sg__doGet(arg1,arg2);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  jresult = (jshort)*result; 
+  jresult = jenv->NewStringUTF(result->c_str()); 
   return jresult;
 }
 
 
-SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jshort jarg3) {
-  jshort jresult = 0 ;
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jstring jarg3) {
+  jstring jresult = 0 ;
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   jint arg2 ;
-  std::vector< unsigned char >::value_type *arg3 = 0 ;
-  std::vector< unsigned char >::value_type temp3 ;
-  std::vector< unsigned char >::value_type result;
+  std::vector< std::string >::value_type *arg3 = 0 ;
+  std::vector< std::string >::value_type result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
   arg2 = jarg2; 
-  temp3 = (std::vector< unsigned char >::value_type)jarg3; 
-  arg3 = &temp3; 
+  if(!jarg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg3_pstr = (const char *)jenv->GetStringUTFChars(jarg3, 0); 
+  if (!arg3_pstr) return 0;
+  std::vector< std::string >::value_type arg3_str(arg3_pstr);
+  arg3 = &arg3_str;
+  jenv->ReleaseStringUTFChars(jarg3, arg3_pstr); 
   try {
-    result = (std::vector< unsigned char >::value_type)std_vector_Sl_unsigned_SS_char_Sg__doSet(arg1,arg2,(unsigned char const &)*arg3);
+    result = std_vector_Sl_std_string_Sg__doSet(arg1,arg2,(std::string const &)*arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  jresult = (jshort)result; 
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_VectorUchar_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorString_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   jint arg2 ;
   jint arg3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
   arg2 = jarg2; 
   arg3 = jarg3; 
   try {
-    std_vector_Sl_unsigned_SS_char_Sg__doRemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_std_string_Sg__doRemoveRange(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return ;
@@ -1857,35 +2259,15383 @@ SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_delete_1VectorUchar(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1VectorString(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< std::string > *arg1 = (std::vector< std::string > *) 0 ;
   
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::vector< unsigned char > **)&jarg1; 
+  arg1 = *(std::vector< std::string > **)&jarg1; 
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_new_1SharedPtrVectorUchar(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorChar_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
-  std::shared_ptr< std::vector< unsigned char > > *result = 0 ;
+  std::vector< char > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  result = (std::shared_ptr< std::vector< unsigned char > > *)new std::shared_ptr< std::vector< unsigned char > >();
-  *(std::shared_ptr< std::vector< unsigned char > > **)&jresult = result; 
+  result = (std::vector< char > *)new std::vector< char >();
+  *(std::vector< char > **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_ViconDataStreamSDKSwigJNI_delete_1SharedPtrVectorUchar(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  std::shared_ptr< std::vector< unsigned char > > *arg1 = (std::shared_ptr< std::vector< unsigned char > > *) 0 ;
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorChar_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  std::vector< char > *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::shared_ptr< std::vector< unsigned char > > **)&jarg1; 
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  result = (std::vector< char > *)new std::vector< char >((std::vector< char > const &)*arg1);
+  *(std::vector< char > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  std::vector< char >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  result = ((std::vector< char > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  std::vector< char >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  arg2 = (std::vector< char >::size_type)jarg2; 
+  try {
+    (arg1)->reserve(arg2);
+  } catch(std::length_error &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  result = (bool)((std::vector< char > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1VectorChar_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jchar jarg2) {
+  jlong jresult = 0 ;
+  jint arg1 ;
+  char *arg2 = 0 ;
+  char temp2 ;
+  std::vector< char > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = jarg1; 
+  temp2 = (char)jarg2; 
+  arg2 = &temp2; 
+  try {
+    result = (std::vector< char > *)new_std_vector_Sl_char_Sg___SWIG_2(arg1,(char const &)*arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  *(std::vector< char > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  jint result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  try {
+    result = std_vector_Sl_char_Sg__doSize((std::vector< char > const *)arg1);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jchar jarg2) {
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  std::vector< char >::value_type *arg2 = 0 ;
+  std::vector< char >::value_type temp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  temp2 = (std::vector< char >::value_type)jarg2; 
+  arg2 = &temp2; 
+  std_vector_Sl_char_Sg__doAdd__SWIG_0(arg1,(char const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jchar jarg3) {
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  jint arg2 ;
+  std::vector< char >::value_type *arg3 = 0 ;
+  std::vector< char >::value_type temp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  arg2 = jarg2; 
+  temp3 = (std::vector< char >::value_type)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_vector_Sl_char_Sg__doAdd__SWIG_1(arg1,arg2,(char const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT jchar JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jchar jresult = 0 ;
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  jint arg2 ;
+  std::vector< char >::value_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  arg2 = jarg2; 
+  try {
+    result = (std::vector< char >::value_type)std_vector_Sl_char_Sg__doRemove(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  jresult = (jchar)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jchar JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jchar jresult = 0 ;
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  jint arg2 ;
+  std::vector< char >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  arg2 = jarg2; 
+  try {
+    result = (std::vector< char >::value_type *) &std_vector_Sl_char_Sg__doGet(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  jresult = (jchar)*result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jchar JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jchar jarg3) {
+  jchar jresult = 0 ;
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  jint arg2 ;
+  std::vector< char >::value_type *arg3 = 0 ;
+  std::vector< char >::value_type temp3 ;
+  std::vector< char >::value_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  arg2 = jarg2; 
+  temp3 = (std::vector< char >::value_type)jarg3; 
+  arg3 = &temp3; 
+  try {
+    result = (std::vector< char >::value_type)std_vector_Sl_char_Sg__doSet(arg1,arg2,(char const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  jresult = (jchar)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_VectorChar_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  jint arg2 ;
+  jint arg3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1; 
+  arg2 = jarg2; 
+  arg3 = jarg3; 
+  try {
+    std_vector_Sl_char_Sg__doRemoveRange(arg1,arg2,arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1VectorChar(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< char > *arg1 = (std::vector< char > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< char > **)&jarg1; 
   delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1SharedPtr(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::shared_ptr< ur_rtde::RobotState > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::shared_ptr< ur_rtde::RobotState > *)new std::shared_ptr< ur_rtde::RobotState >();
+  *(std::shared_ptr< ur_rtde::RobotState > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1SharedPtr(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::shared_ptr< ur_rtde::RobotState > *arg1 = (std::shared_ptr< ur_rtde::RobotState > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::shared_ptr< ur_rtde::RobotState > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RTDEControlInterface_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_RTDEControlInterface = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_RTDEControlInterface, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_RTDEControlInterface = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RTDEControlInterface_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_RTDEControlInterface;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1ROBOT_1STATUS_1POWER_1BUTTON_1PRESSED_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_POWER_BUTTON_PRESSED = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_POWER_BUTTON_PRESSED, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_POWER_BUTTON_PRESSED = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1ROBOT_1STATUS_1POWER_1BUTTON_1PRESSED_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_POWER_BUTTON_PRESSED;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1ROBOT_1STATUS_1POWER_1ON_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_POWER_ON = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_POWER_ON, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_POWER_ON = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1ROBOT_1STATUS_1POWER_1ON_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_POWER_ON;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1ROBOT_1STATUS_1PROGRAM_1RUNNING_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_PROGRAM_RUNNING = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_PROGRAM_RUNNING, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_PROGRAM_RUNNING = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1ROBOT_1STATUS_1PROGRAM_1RUNNING_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_PROGRAM_RUNNING;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1ROBOT_1STATUS_1TEACH_1BUTTON_1PRESSED_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_TEACH_BUTTON_PRESSED = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_TEACH_BUTTON_PRESSED, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_TEACH_BUTTON_PRESSED = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1RobotStatus_1ROBOT_1STATUS_1TEACH_1BUTTON_1PRESSED_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_RobotStatus_ROBOT_STATUS_TEACH_BUTTON_PRESSED;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1db_1client_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_db_client = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_db_client, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_db_client = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1db_1client_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_db_client;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1endTeachMode_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_endTeachMode = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_endTeachMode, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_endTeachMode = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1endTeachMode_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_endTeachMode;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1forceModeSetDamping_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_forceModeSetDamping = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_forceModeSetDamping, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_forceModeSetDamping = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1forceModeSetDamping_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_forceModeSetDamping;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1forceModeSetGainScaling_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_forceModeSetGainScaling = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_forceModeSetGainScaling, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_forceModeSetGainScaling = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1forceModeSetGainScaling_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_forceModeSetGainScaling;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1forceModeStop_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_forceModeStop = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_forceModeStop, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_forceModeStop = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1forceModeStop_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_forceModeStop;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getActualJointPositionsHistory_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getActualJointPositionsHistory = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getActualJointPositionsHistory, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getActualJointPositionsHistory = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getActualJointPositionsHistory_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getActualJointPositionsHistory;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getActualJointPositionsHistoryValue_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getActualJointPositionsHistoryValue = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getActualJointPositionsHistoryValue, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getActualJointPositionsHistoryValue = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getActualJointPositionsHistoryValue_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getActualJointPositionsHistoryValue;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getControlScriptState_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getControlScriptState = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getControlScriptState, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getControlScriptState = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getControlScriptState_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getControlScriptState;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getInverseKinematics_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getInverseKinematics = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getInverseKinematics, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getInverseKinematics = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getInverseKinematics_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getInverseKinematics;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1poseTrans_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_poseTrans = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_poseTrans, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_poseTrans = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1poseTrans_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_poseTrans;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getStepTime_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getStepTime = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getStepTime, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getStepTime = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getStepTime_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getStepTime;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getStepTimeValue_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getStepTimeValue = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getStepTimeValue, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getStepTimeValue = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getStepTimeValue_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getStepTimeValue;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getTargetWaypoint_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getTargetWaypoint = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getTargetWaypoint, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getTargetWaypoint = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getTargetWaypoint_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getTargetWaypoint;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getTargetWaypointValue_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getTargetWaypointValue = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getTargetWaypointValue, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getTargetWaypointValue = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getTargetWaypointValue_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getTargetWaypointValue;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getToolContactValue_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_getToolContactValue = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_getToolContactValue, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_getToolContactValue = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1getToolContactValue_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_getToolContactValue;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1hostname_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_hostname = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_hostname, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_hostname = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1hostname_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_hostname;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1isConnected_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_isConnected = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_isConnected, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_isConnected = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1isConnected_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_isConnected;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1isProgramRunning_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_isProgramRunning = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_isProgramRunning, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_isProgramRunning = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1isProgramRunning_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_isProgramRunning;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveC_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_moveC = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_moveC, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_moveC = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveC_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_moveC;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveJ_12_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_moveJ_2 = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_moveJ_2, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_moveJ_2 = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveJ_12_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_moveJ_2;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveJ_1IK_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_moveJ_IK = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_moveJ_IK, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_moveJ_IK = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveJ_1IK_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_moveJ_IK;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveL_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_moveL = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_moveL, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_moveL = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveL_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_moveL;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveL_12_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_moveL_2 = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_moveL_2, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_moveL_2 = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveL_12_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_moveL_2;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveL_1FK_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_moveL_FK = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_moveL_FK, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_moveL_FK = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveL_1FK_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_moveL_FK;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveP_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_moveP = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_moveP, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_moveP = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1moveP_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_moveP;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1port_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_port = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_port, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_port = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1port_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_port;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1prepareCmdScript_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_prepareCmdScript = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_prepareCmdScript, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_prepareCmdScript = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1prepareCmdScript_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_prepareCmdScript;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1receiveCallback_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_receiveCallback = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_receiveCallback, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_receiveCallback = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1receiveCallback_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_receiveCallback;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1reconnect_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_reconnect = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_reconnect, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_reconnect = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1reconnect_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_reconnect;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1reuploadScript_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_reuploadScript = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_reuploadScript, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_reuploadScript = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1reuploadScript_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_reuploadScript;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1robot_1state_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_robot_state = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_robot_state, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_robot_state = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1robot_1state_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_robot_state;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1rtde_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_rtde = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_rtde, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_rtde = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1rtde_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_rtde;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1script_1client_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_script_client = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_script_client, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_script_client = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1script_1client_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_script_client;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1sendClearCommand_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_sendClearCommand = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_sendClearCommand, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_sendClearCommand = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1sendClearCommand_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_sendClearCommand;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1sendCommand_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_sendCommand = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_sendCommand, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_sendCommand = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1sendCommand_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_sendCommand;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1sendCustomScriptFile_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_sendCustomScriptFile = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_sendCustomScriptFile, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_sendCustomScriptFile = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1sendCustomScriptFile_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_sendCustomScriptFile;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1sendCustomScriptFunction_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_sendCustomScriptFunction = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_sendCustomScriptFunction, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_sendCustomScriptFunction = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1sendCustomScriptFunction_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_sendCustomScriptFunction;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1servoC_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_servoC = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_servoC, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_servoC = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1servoC_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_servoC;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1servoJ_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_servoJ = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_servoJ, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_servoJ = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1servoJ_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_servoJ;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1servoL_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_servoL = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_servoL, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_servoL = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1servoL_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_servoL;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1servoStop_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_servoStop = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_servoStop, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_servoStop = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1servoStop_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_servoStop;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1setPayload_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_setPayload = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_setPayload, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_setPayload = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1setPayload_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_setPayload;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1setTcp_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_setTcp = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_setTcp, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_setTcp = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1setTcp_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_setTcp;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1setupRecipes_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_setupRecipes = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_setupRecipes, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_setupRecipes = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1setupRecipes_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_setupRecipes;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1speedJ_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_speedJ = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_speedJ, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_speedJ = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1speedJ_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_speedJ;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1stopScript_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_stopScript = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_stopScript, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_stopScript = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1stopScript_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_stopScript;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1stop_1thread_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_stop_thread = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_stop_thread, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_stop_thread = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1stop_1thread_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_stop_thread;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1teachMode_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_teachMode = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_teachMode, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_teachMode = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1teachMode_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_teachMode;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1th_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_th = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_th, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_th = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1th_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_th;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1toolContact_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_toolContact = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_toolContact, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_toolContact = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1toolContact_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_toolContact;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1triggerProtectiveStop_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_triggerProtectiveStop = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_triggerProtectiveStop, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_triggerProtectiveStop = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1triggerProtectiveStop_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_triggerProtectiveStop;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1verifyValueIsWithin_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_verifyValueIsWithin = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_verifyValueIsWithin, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_verifyValueIsWithin = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1verifyValueIsWithin_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_verifyValueIsWithin;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1zeroFtSensor_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEControlInterface_zeroFtSensor = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEControlInterface_zeroFtSensor, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEControlInterface_zeroFtSensor = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEControlInterface_1zeroFtSensor_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEControlInterface_zeroFtSensor;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1PolyScopeVersion(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jlong jresult = 0 ;
+  std::string *arg1 = 0 ;
+  ur_rtde::PolyScopeVersion *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::PolyScopeVersion *)new ur_rtde::PolyScopeVersion((std::string const &)*arg1);
+  *(ur_rtde::PolyScopeVersion **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1major_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  int arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->major = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1major_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  result = (int) ((arg1)->major);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1minor_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  int arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->minor = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1minor_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  result = (int) ((arg1)->minor);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1patch_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  int arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->patch = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1patch_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  result = (int) ((arg1)->patch);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1build_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  int arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->build = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1build_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  result = (int) ((arg1)->build);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1toString(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  result = (arg1)->toString();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_PolyScopeVersion_1parse(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  (arg1)->parse((std::string const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1PolyScopeVersion(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::PolyScopeVersion *arg1 = (ur_rtde::PolyScopeVersion *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::PolyScopeVersion **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_parseProgramState(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jint jresult = 0 ;
+  std::string *arg1 = 0 ;
+  ur_rtde::ProgramState result;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::ProgramState)ur_rtde::parseProgramState((std::string const &)*arg1);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_toString_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jstring jresult = 0 ;
+  ur_rtde::ProgramState *arg1 = 0 ;
+  ur_rtde::ProgramState temp1 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  temp1 = (ur_rtde::ProgramState)jarg1; 
+  arg1 = &temp1; 
+  result = ur_rtde::toString((enum ur_rtde::ProgramState const &)*arg1);
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_parseSafetyMode(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jint jresult = 0 ;
+  std::string *arg1 = 0 ;
+  ur_rtde::SafetyMode result;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::SafetyMode)ur_rtde::parseSafetyMode((std::string const &)*arg1);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_toString_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jstring jresult = 0 ;
+  ur_rtde::SafetyMode *arg1 = 0 ;
+  ur_rtde::SafetyMode temp1 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  temp1 = (ur_rtde::SafetyMode)jarg1; 
+  arg1 = &temp1; 
+  result = ur_rtde::toString((enum ur_rtde::SafetyMode const &)*arg1);
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_parseSafetyStatus(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jint jresult = 0 ;
+  std::string *arg1 = 0 ;
+  ur_rtde::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::SafetyStatus)ur_rtde::parseSafetyStatus((std::string const &)*arg1);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_toString_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jstring jresult = 0 ;
+  ur_rtde::SafetyStatus *arg1 = 0 ;
+  ur_rtde::SafetyStatus temp1 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  temp1 = (ur_rtde::SafetyStatus)jarg1; 
+  arg1 = &temp1; 
+  result = ur_rtde::toString((enum ur_rtde::SafetyStatus const &)*arg1);
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_parseRobotMode(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jint jresult = 0 ;
+  std::string *arg1 = 0 ;
+  ur_rtde::RobotMode result;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::RobotMode)ur_rtde::parseRobotMode((std::string const &)*arg1);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_toString_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jstring jresult = 0 ;
+  ur_rtde::RobotMode *arg1 = 0 ;
+  ur_rtde::RobotMode temp1 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  temp1 = (ur_rtde::RobotMode)jarg1; 
+  arg1 = &temp1; 
+  result = ur_rtde::toString((enum ur_rtde::RobotMode const &)*arg1);
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1DashboardClient_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jboolean jarg3) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  int arg2 ;
+  bool arg3 ;
+  ur_rtde::DashboardClient *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (int)jarg2; 
+  arg3 = jarg3 ? true : false; 
+  result = (ur_rtde::DashboardClient *)new ur_rtde::DashboardClient(arg1,arg2,arg3);
+  *(ur_rtde::DashboardClient **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1DashboardClient_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  int arg2 ;
+  ur_rtde::DashboardClient *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (int)jarg2; 
+  result = (ur_rtde::DashboardClient *)new ur_rtde::DashboardClient(arg1,arg2);
+  *(ur_rtde::DashboardClient **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1DashboardClient_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  ur_rtde::DashboardClient *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::DashboardClient *)new ur_rtde::DashboardClient(arg1);
+  *(ur_rtde::DashboardClient **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1DashboardClient(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1ConnectionState_1DISCONNECTED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::DashboardClient::ConnectionState result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::DashboardClient::ConnectionState)ur_rtde::DashboardClient::ConnectionState::DISCONNECTED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1ConnectionState_1CONNECTED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::DashboardClient::ConnectionState result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::DashboardClient::ConnectionState)ur_rtde::DashboardClient::ConnectionState::CONNECTED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1connect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->connect();
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1isConnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (bool)(arg1)->isConnected();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1disconnect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->disconnect();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1send(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  (arg1)->send((std::string const &)*arg2);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1receive(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (arg1)->receive();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1loadURP(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  (arg1)->loadURP((std::string const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1play(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->play();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1stop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->stop();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1pause(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->pause();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1quit(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->quit();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1shutdown(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->shutdown();
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1running(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (bool)(arg1)->running();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1popup(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  (arg1)->popup((std::string const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1closePopup(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->closePopup();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1closeSafetyPopup(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->closeSafetyPopup();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1powerOn(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->powerOn();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1powerOff(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->powerOff();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1brakeRelease(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->brakeRelease();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1unlockProtectiveStop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->unlockProtectiveStop();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1restartSafety(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  (arg1)->restartSafety();
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1polyscopeVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (arg1)->polyscopeVersion();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1programState(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (arg1)->programState();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1robotmode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (arg1)->robotmode();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1getLoadedProgram(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (arg1)->getLoadedProgram();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1safetymode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (arg1)->safetymode();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1safetystatus(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (arg1)->safetystatus();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1addToLog(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  (arg1)->addToLog((std::string const &)*arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1isProgramSaved(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (bool)(arg1)->isProgramSaved();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1isInRemoteControl(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  result = (bool)(arg1)->isInRemoteControl();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_DashboardClient_1setUserRole(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  ur_rtde::DashboardClient *arg1 = (ur_rtde::DashboardClient *) 0 ;
+  ur_rtde::UserRole *arg2 = 0 ;
+  ur_rtde::UserRole temp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::DashboardClient **)&jarg1; 
+  temp2 = (ur_rtde::UserRole)jarg2; 
+  arg2 = &temp2; 
+  (arg1)->setUserRole((ur_rtde::UserRole const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RobotState(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RobotState *)new ur_rtde::RobotState();
+  *(ur_rtde::RobotState **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1RobotState(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1lockUpdateStateMutex(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (bool)(arg1)->lockUpdateStateMutex();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1unlockUpdateStateMutex(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (bool)(arg1)->unlockUpdateStateMutex();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTimestamp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getTimestamp();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTimestamp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setTimestamp(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTarget_1q(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getTarget_q();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTarget_1q(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setTarget_q((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTarget_1qd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getTarget_qd();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTarget_1qd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setTarget_qd((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTarget_1qdd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getTarget_qdd();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTarget_1qdd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setTarget_qdd((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTarget_1current(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getTarget_current();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTarget_1current(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setTarget_current((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTarget_1moment(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getTarget_moment();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTarget_1moment(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setTarget_moment((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1q(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getActual_q();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1q(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setActual_q((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1qd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getActual_qd();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1qd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setActual_qd((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1current(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getActual_current();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1current(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setActual_current((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getJoint_1control_1output(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getJoint_control_output();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setJoint_1control_1output(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setJoint_control_output((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1TCP_1pose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getActual_TCP_pose();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1TCP_1pose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setActual_TCP_pose((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1TCP_1speed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getActual_TCP_speed();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1TCP_1speed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setActual_TCP_speed((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1TCP_1force(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getActual_TCP_force();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1TCP_1force(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setActual_TCP_force((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTarget_1TCP_1pose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getTarget_TCP_pose();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTarget_1TCP_1pose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setTarget_TCP_pose((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTarget_1TCP_1speed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getTarget_TCP_speed();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTarget_1TCP_1speed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setTarget_TCP_speed((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1digital_1input_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint64_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getActual_digital_input_bits();
+  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1digital_1input_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(uint64_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint64_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setActual_digital_input_bits(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getJoint_1temperatures(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getJoint_temperatures();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setJoint_1temperatures(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setJoint_temperatures((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1execution_1time(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getActual_execution_time();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1execution_1time(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setActual_execution_time(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getRobot_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getRobot_mode();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setRobot_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setRobot_mode(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getRobot_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getRobot_status();
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setRobot_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setRobot_status(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getSafety_1status_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getSafety_status_bits();
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setSafety_1status_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setSafety_status_bits(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getJoint_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< int32_t > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< int32_t > *) &(arg1)->getJoint_mode();
+  *(std::vector< int32_t > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setJoint_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< int32_t > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< int32_t > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< int32_t > const & reference is null");
+    return ;
+  } 
+  (arg1)->setJoint_mode((std::vector< int32_t > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getSafety_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getSafety_mode();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setSafety_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setSafety_mode(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1tool_1accelerometer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getActual_tool_accelerometer();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1tool_1accelerometer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setActual_tool_accelerometer((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getSpeed_1scaling(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getSpeed_scaling();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setSpeed_1scaling(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setSpeed_scaling(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getTarget_1speed_1fraction(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getTarget_speed_fraction();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setTarget_1speed_1fraction(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setTarget_speed_fraction(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1momentum(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getActual_momentum();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1momentum(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setActual_momentum(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1main_1voltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getActual_main_voltage();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1main_1voltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setActual_main_voltage(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1robot_1voltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getActual_robot_voltage();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1robot_1voltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setActual_robot_voltage(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1robot_1current(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getActual_robot_current();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1robot_1current(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setActual_robot_current(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1joint_1voltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (std::vector< double > *) &(arg1)->getActual_joint_voltage();
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1joint_1voltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->setActual_joint_voltage((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getActual_1digital_1output_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint64_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getActual_digital_output_bits();
+  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setActual_1digital_1output_1bits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(uint64_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint64_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setActual_digital_output_bits(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getRuntime_1state(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getRuntime_state();
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getStandard_1analog_1input_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getStandard_analog_input_0();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setStandard_1analog_1input_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setStandard_analog_input_0(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getStandard_1analog_1input_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getStandard_analog_input_1();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setStandard_1analog_1input_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setStandard_analog_input_1(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getStandard_1analog_1output_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getStandard_analog_output_0();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setStandard_1analog_1output_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setStandard_analog_output_0(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getStandard_1analog_1output_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getStandard_analog_output_1();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setStandard_1analog_1output_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setStandard_analog_output_1(arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setRuntime_1state(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setRuntime_state(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1bit_1registers0_1to_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_bit_registers0_to_31();
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1bit_1registers0_1to_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_bit_registers0_to_31(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1bit_1registers32_1to_163(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_bit_registers32_to_63();
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1bit_1registers32_1to_163(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_bit_registers32_to_63(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_0();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_0(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_1();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_1(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_2();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_2(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_3();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_3(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_4();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_4(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_5();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_5(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_6();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_6(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_7();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_7(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_8();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_8(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_19(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_9();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_19(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_9(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_110(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_10();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_110(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_10(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_111(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_11();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_111(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_11(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_112(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_12();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_112(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_12(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_113(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_13();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_113(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_13(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_114(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_14();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_114(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_14(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_115(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_15();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_115(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_15(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_116(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_16();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_116(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_16(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_117(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_17();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_117(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_17(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_118(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_18();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_118(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_18(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_119(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_19();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_119(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_19(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_120(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_20();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_120(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_20(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_121(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_21();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_121(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_21(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_122(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_22();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_122(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_22(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_123(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_23();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_123(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_23(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_124(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_24();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_124(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_24(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_125(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_25();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_125(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_25(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_126(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_26();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_126(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_26(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_127(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_27();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_127(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_27(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_128(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_28();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_128(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_28(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_129(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_29();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_129(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_29(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_130(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_30();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_130(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_30(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_31();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_31(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_132(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_32();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_132(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_32(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_133(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_33();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_133(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_33(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_134(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_34();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_134(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_34(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_135(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_35();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_135(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_35(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_136(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_36();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_136(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_36(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_137(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_37();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_137(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_37(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_138(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_38();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_138(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_38(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_139(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_39();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_139(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_39(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_140(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_40();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_140(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_40(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_141(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_41();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_141(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_41(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_142(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_42();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_142(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_42(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_143(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_43();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_143(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_43(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_144(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_44();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_144(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_44(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_145(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_45();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_145(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_45(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_146(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_46();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_146(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_46(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1int_1register_147(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (arg1)->getOutput_int_register_47();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1int_1register_147(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  int32_t arg2 ;
+  int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  argp2 = *(int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->setOutput_int_register_47(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_0();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_0(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_1();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_1(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_2();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_2(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_3();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_3(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_4();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_4(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_5();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_5(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_6();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_6(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_7();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_7(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_8();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_8(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_19(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_9();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_19(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_9(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_110(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_10();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_110(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_10(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_111(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_11();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_111(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_11(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_112(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_12();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_112(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_12(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_113(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_13();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_113(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_13(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_114(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_14();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_114(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_14(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_115(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_15();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_115(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_15(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_116(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_16();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_116(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_16(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_117(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_17();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_117(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_17(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_118(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_18();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_118(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_18(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_119(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_19();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_119(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_19(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_120(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_20();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_120(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_20(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_121(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_21();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_121(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_21(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_122(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_22();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_122(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_22(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_123(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_23();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_123(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_23(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_124(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_24();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_124(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_24(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_125(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_25();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_125(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_25(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_126(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_26();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_126(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_26(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_127(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_27();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_127(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_27(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_128(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_28();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_128(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_28(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_129(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_29();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_129(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_29(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_130(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_30();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_130(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_30(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_31();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_131(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_31(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_132(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_32();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_132(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_32(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_133(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_33();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_133(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_33(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_134(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_34();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_134(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_34(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_135(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_35();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_135(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_35(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_136(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_36();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_136(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_36(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_137(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_37();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_137(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_37(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_138(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_38();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_138(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_38(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_139(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_39();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_139(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_39(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_140(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_40();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_140(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_40(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_141(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_41();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_141(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_41(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_142(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_42();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_142(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_42(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_143(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_43();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_143(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_43(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_144(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_44();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_144(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_44(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_145(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_45();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_145(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_45(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_146(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_46();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_146(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_46(arg2);
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1getOutput_1double_1register_147(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  result = (double)(arg1)->getOutput_double_register_47();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RobotState_1setOutput_1double_1register_147(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RobotState *arg1 = (ur_rtde::RobotState *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RobotState **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setOutput_double_register_47(arg2);
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_MAJOR_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(0);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_MINOR_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(1);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_CB3_1MAJOR_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(3);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1CONTROLLER_1RDY_1FOR_1CMD_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(1);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1CONTROLLER_1DONE_1WITH_1CMD_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(2);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1EXECUTION_1TIMEOUT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(300);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1PATH_1EXECUTION_1TIMEOUT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(600);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1GET_1READY_1TIMEOUT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(3);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1START_1SYNCHRONIZATION_1TIMEOUT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(5);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1JOINT_1VELOCITY_1MAX_1get(JNIEnv *jenv, jclass jcls) {
+  jdouble jresult = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (double)(3.14);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1JOINT_1VELOCITY_1MIN_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(0);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1JOINT_1ACCELERATION_1MAX_1get(JNIEnv *jenv, jclass jcls) {
+  jdouble jresult = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (double)(40.0);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1JOINT_1ACCELERATION_1MIN_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(0);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1TOOL_1VELOCITY_1MAX_1get(JNIEnv *jenv, jclass jcls) {
+  jdouble jresult = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (double)(3.0);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1TOOL_1VELOCITY_1MIN_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(0);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1TOOL_1ACCELERATION_1MAX_1get(JNIEnv *jenv, jclass jcls) {
+  jdouble jresult = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (double)(150.0);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1TOOL_1ACCELERATION_1MIN_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(0);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1SERVO_1LOOKAHEAD_1TIME_1MAX_1get(JNIEnv *jenv, jclass jcls) {
+  jdouble jresult = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (double)(0.2);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1SERVO_1LOOKAHEAD_1TIME_1MIN_1get(JNIEnv *jenv, jclass jcls) {
+  jdouble jresult = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (double)(0.03);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1SERVO_1GAIN_1MAX_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(2000);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1SERVO_1GAIN_1MIN_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(100);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1BLEND_1MAX_1get(JNIEnv *jenv, jclass jcls) {
+  jdouble jresult = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (double)(2.0);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1BLEND_1MIN_1get(JNIEnv *jenv, jclass jcls) {
+  jdouble jresult = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (double)(0.0);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEControlInterface_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jboolean jarg3) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  int arg2 ;
+  bool arg3 ;
+  ur_rtde::RTDEControlInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (int)jarg2; 
+  arg3 = jarg3 ? true : false; 
+  result = (ur_rtde::RTDEControlInterface *)new ur_rtde::RTDEControlInterface(arg1,arg2,arg3);
+  *(ur_rtde::RTDEControlInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEControlInterface_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  int arg2 ;
+  ur_rtde::RTDEControlInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (int)jarg2; 
+  result = (ur_rtde::RTDEControlInterface *)new ur_rtde::RTDEControlInterface(arg1,arg2);
+  *(ur_rtde::RTDEControlInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEControlInterface_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  ur_rtde::RTDEControlInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::RTDEControlInterface *)new ur_rtde::RTDEControlInterface(arg1);
+  *(ur_rtde::RTDEControlInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1RTDEControlInterface(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1ROBOT_1STATUS_1POWER_1ON_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::RobotStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::RobotStatus)ur_rtde::RTDEControlInterface::ROBOT_STATUS_POWER_ON;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1ROBOT_1STATUS_1PROGRAM_1RUNNING_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::RobotStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::RobotStatus)ur_rtde::RTDEControlInterface::ROBOT_STATUS_PROGRAM_RUNNING;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1ROBOT_1STATUS_1TEACH_1BUTTON_1PRESSED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::RobotStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::RobotStatus)ur_rtde::RTDEControlInterface::ROBOT_STATUS_TEACH_BUTTON_PRESSED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1ROBOT_1STATUS_1POWER_1BUTTON_1PRESSED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::RobotStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::RobotStatus)ur_rtde::RTDEControlInterface::ROBOT_STATUS_POWER_BUTTON_PRESSED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1NORMAL_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_NORMAL_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1REDUCED_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_REDUCED_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1PROTECTIVE_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_PROTECTIVE_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1RECOVERY_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_RECOVERY_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1SAFEGUARD_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_SAFEGUARD_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1SYSTEM_1EMERGENCY_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_SYSTEM_EMERGENCY_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1ROBOT_1EMERGENCY_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_ROBOT_EMERGENCY_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1EMERGENCY_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_EMERGENCY_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1VIOLATION_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_VIOLATION;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1FAULT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_FAULT;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1IS_1STOPPED_1DUE_1TO_1SAFETY_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEControlInterface::SafetyStatus)ur_rtde::RTDEControlInterface::IS_STOPPED_DUE_TO_SAFETY;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1disconnect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  (arg1)->disconnect();
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1reconnect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->reconnect();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1isConnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->isConnected();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1reuploadScript(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->reuploadScript();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1sendCustomScriptFunction(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string *arg3 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  if(!jarg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg3_pstr = (const char *)jenv->GetStringUTFChars(jarg3, 0); 
+  if (!arg3_pstr) return 0;
+  std::string arg3_str(arg3_pstr);
+  arg3 = &arg3_str;
+  jenv->ReleaseStringUTFChars(jarg3, arg3_pstr); 
+  result = (bool)(arg1)->sendCustomScriptFunction((std::string const &)*arg2,(std::string const &)*arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1sendCustomScriptFile(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::string *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = (bool)(arg1)->sendCustomScriptFile((std::string const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1stopScript(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  (arg1)->stopScript();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1stopL_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->stopL(arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1stopL_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  (arg1)->stopL();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1stopJ_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->stopJ(arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1stopJ_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  (arg1)->stopJ();
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveJ_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->moveJ((std::vector< double > const &)*arg2,arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveJ_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->moveJ((std::vector< double > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveJ_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->moveJ((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveJ_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< std::vector< double > > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< std::vector< double > > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< double > > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->moveJ((std::vector< std::vector< double > > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveJ_1IK_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->moveJ_IK((std::vector< double > const &)*arg2,arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveJ_1IK_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->moveJ_IK((std::vector< double > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveJ_1IK_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->moveJ_IK((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveL_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->moveL((std::vector< double > const &)*arg2,arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveL_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->moveL((std::vector< double > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveL_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->moveL((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveL_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< std::vector< double > > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< std::vector< double > > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::vector< double > > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->moveL((std::vector< std::vector< double > > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveL_1FK_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->moveL_FK((std::vector< double > const &)*arg2,arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveL_1FK_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->moveL_FK((std::vector< double > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveL_1FK_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->moveL_FK((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveC_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jdouble jarg4, jdouble jarg5, jdouble jarg6, jint jarg7) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  double arg4 ;
+  double arg5 ;
+  double arg6 ;
+  int arg7 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  arg6 = (double)jarg6; 
+  arg7 = (int)jarg7; 
+  result = (bool)(arg1)->moveC((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3,arg4,arg5,arg6,arg7);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveC_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jdouble jarg4, jdouble jarg5, jdouble jarg6) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  double arg4 ;
+  double arg5 ;
+  double arg6 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  arg6 = (double)jarg6; 
+  result = (bool)(arg1)->moveC((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3,arg4,arg5,arg6);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveC_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jdouble jarg4, jdouble jarg5) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  double arg4 ;
+  double arg5 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  result = (bool)(arg1)->moveC((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3,arg4,arg5);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveC_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->moveC((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveC_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->moveC((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveP_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4, jdouble jarg5) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  double arg5 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  result = (bool)(arg1)->moveP((std::vector< double > const &)*arg2,arg3,arg4,arg5);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveP_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->moveP((std::vector< double > const &)*arg2,arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveP_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->moveP((std::vector< double > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1moveP_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->moveP((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1speedJ_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->speedJ((std::vector< double > const &)*arg2,arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1speedJ_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->speedJ((std::vector< double > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1speedJ_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->speedJ((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1speedL_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->speedL((std::vector< double > const &)*arg2,arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1speedL_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->speedL((std::vector< double > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1speedL_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->speedL((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1servoJ(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6, jdouble jarg7) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  double arg5 ;
+  double arg6 ;
+  double arg7 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  arg6 = (double)jarg6; 
+  arg7 = (double)jarg7; 
+  result = (bool)(arg1)->servoJ((std::vector< double > const &)*arg2,arg3,arg4,arg5,arg6,arg7);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1servoL(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6, jdouble jarg7) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  double arg5 ;
+  double arg6 ;
+  double arg7 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  arg6 = (double)jarg6; 
+  arg7 = (double)jarg7; 
+  result = (bool)(arg1)->servoL((std::vector< double > const &)*arg2,arg3,arg4,arg5,arg6,arg7);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1servoStop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->servoStop();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1speedStop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->speedStop();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1servoC_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4, jdouble jarg5) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  double arg5 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  result = (bool)(arg1)->servoC((std::vector< double > const &)*arg2,arg3,arg4,arg5);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1servoC_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3, jdouble jarg4) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  double arg4 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  arg4 = (double)jarg4; 
+  result = (bool)(arg1)->servoC((std::vector< double > const &)*arg2,arg3,arg4);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1servoC_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->servoC((std::vector< double > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1servoC_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->servoC((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1forceMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jint jarg5, jlong jarg6, jobject jarg6_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< int > *arg3 = 0 ;
+  std::vector< double > *arg4 = 0 ;
+  int arg5 ;
+  std::vector< double > *arg6 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  (void)jarg6_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< int > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< int > const & reference is null");
+    return 0;
+  } 
+  arg4 = *(std::vector< double > **)&jarg4;
+  if (!arg4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg5 = (int)jarg5; 
+  arg6 = *(std::vector< double > **)&jarg6;
+  if (!arg6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->forceMode((std::vector< double > const &)*arg2,(std::vector< int > const &)*arg3,(std::vector< double > const &)*arg4,arg5,(std::vector< double > const &)*arg6);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1forceModeStop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->forceModeStop();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1zeroFtSensor(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->zeroFtSensor();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1setPayload_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2, jlong jarg3, jobject jarg3_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  double arg2 ;
+  std::vector< double > *arg3 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = (double)jarg2; 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->setPayload(arg2,(std::vector< double > const &)*arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1setPayload_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  double arg2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = (double)jarg2; 
+  result = (bool)(arg1)->setPayload(arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1teachMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->teachMode();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1endTeachMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->endTeachMode();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1forceModeSetDamping(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  double arg2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = (double)jarg2; 
+  result = (bool)(arg1)->forceModeSetDamping(arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1forceModeSetGainScaling(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  double arg2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = (double)jarg2; 
+  result = (bool)(arg1)->forceModeSetGainScaling(arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1toolContact(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (int)(arg1)->toolContact((std::vector< double > const &)*arg2);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1getStepTime(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (double)(arg1)->getStepTime();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1getActualJointPositionsHistory_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  int arg2 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (arg1)->getActualJointPositionsHistory(arg2);
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1getActualJointPositionsHistory_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (arg1)->getActualJointPositionsHistory();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1getTargetWaypoint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (arg1)->getTargetWaypoint();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1setTcp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->setTcp((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1getInverseKinematics_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jdouble jarg4, jdouble jarg5) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  double arg4 ;
+  double arg5 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  result = (arg1)->getInverseKinematics((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3,arg4,arg5);
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1getInverseKinematics_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jdouble jarg4) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  double arg4 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg4 = (double)jarg4; 
+  result = (arg1)->getInverseKinematics((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3,arg4);
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1getInverseKinematics_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (arg1)->getInverseKinematics((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3);
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1poseTrans(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  std::vector< double > *arg3 = 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  arg3 = *(std::vector< double > **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (arg1)->poseTrans((std::vector< double > const &)*arg2,(std::vector< double > const &)*arg3);
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1triggerProtectiveStop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->triggerProtectiveStop();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1isProgramRunning(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->isProgramRunning();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1setWatchdog_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  double arg2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = (double)jarg2; 
+  result = (bool)(arg1)->setWatchdog(arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1setWatchdog_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->setWatchdog();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1kickWatchdog(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (bool)(arg1)->kickWatchdog();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1isPoseWithinSafetyLimits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->isPoseWithinSafetyLimits((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1isJointsWithinSafetyLimits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->isJointsWithinSafetyLimits((std::vector< double > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEControlInterface_1getJointTorques(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEControlInterface *arg1 = (ur_rtde::RTDEControlInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEControlInterface **)&jarg1; 
+  result = (arg1)->getJointTorques();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_NEW_1LINE_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  std::string *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::string *) &NEW_LINE;
+  jresult = jenv->NewStringUTF(result->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_QUOTATION_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  std::string *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::string *) &QUOTATION;
+  jresult = jenv->NewStringUTF(result->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1SCRIPT_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  std::string *arg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return ;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  UR_SCRIPT = *arg1;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_UR_1SCRIPT_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  std::string *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::string *) &UR_SCRIPT;
+  jresult = jenv->NewStringUTF(result->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RTDEIOInterface_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_RTDEIOInterface = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_RTDEIOInterface, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_RTDEIOInterface = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RTDEIOInterface_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_RTDEIOInterface;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1ROBOT_1STATUS_1POWER_1BUTTON_1PRESSED_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_POWER_BUTTON_PRESSED = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_POWER_BUTTON_PRESSED, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_POWER_BUTTON_PRESSED = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1ROBOT_1STATUS_1POWER_1BUTTON_1PRESSED_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_POWER_BUTTON_PRESSED;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1ROBOT_1STATUS_1POWER_1ON_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_POWER_ON = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_POWER_ON, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_POWER_ON = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1ROBOT_1STATUS_1POWER_1ON_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_POWER_ON;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1ROBOT_1STATUS_1PROGRAM_1RUNNING_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_PROGRAM_RUNNING = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_PROGRAM_RUNNING, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_PROGRAM_RUNNING = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1ROBOT_1STATUS_1PROGRAM_1RUNNING_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_PROGRAM_RUNNING;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1ROBOT_1STATUS_1TEACH_1BUTTON_1PRESSED_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_TEACH_BUTTON_PRESSED = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_TEACH_BUTTON_PRESSED, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_TEACH_BUTTON_PRESSED = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1RobotStatus_1ROBOT_1STATUS_1TEACH_1BUTTON_1PRESSED_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_RobotStatus_ROBOT_STATUS_TEACH_BUTTON_PRESSED;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1hostname_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_hostname = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_hostname, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_hostname = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1hostname_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_hostname;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1port_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_port = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_port, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_port = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1port_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_port;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1reconnect_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_reconnect = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_reconnect, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_reconnect = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1reconnect_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_reconnect;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1rtde_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_rtde = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_rtde, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_rtde = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1rtde_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_rtde;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1sendCommand_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_sendCommand = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_sendCommand, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_sendCommand = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1sendCommand_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_sendCommand;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1setAnalogOutputCurrent_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_setAnalogOutputCurrent = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_setAnalogOutputCurrent, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_setAnalogOutputCurrent = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1setAnalogOutputCurrent_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_setAnalogOutputCurrent;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1setAnalogOutputVoltage_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_setAnalogOutputVoltage = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_setAnalogOutputVoltage, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_setAnalogOutputVoltage = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1setAnalogOutputVoltage_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_setAnalogOutputVoltage;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1setSpeedSlider_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_setSpeedSlider = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_setSpeedSlider, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_setSpeedSlider = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1setSpeedSlider_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_setSpeedSlider;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1verifyValueIsWithin_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEIOInterface_verifyValueIsWithin = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEIOInterface_verifyValueIsWithin, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEIOInterface_verifyValueIsWithin = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEIOInterface_1verifyValueIsWithin_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEIOInterface_verifyValueIsWithin;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEIOInterface_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jboolean jarg3) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  int arg2 ;
+  bool arg3 ;
+  ur_rtde::RTDEIOInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (int)jarg2; 
+  arg3 = jarg3 ? true : false; 
+  result = (ur_rtde::RTDEIOInterface *)new ur_rtde::RTDEIOInterface(arg1,arg2,arg3);
+  *(ur_rtde::RTDEIOInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEIOInterface_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  int arg2 ;
+  ur_rtde::RTDEIOInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (int)jarg2; 
+  result = (ur_rtde::RTDEIOInterface *)new ur_rtde::RTDEIOInterface(arg1,arg2);
+  *(ur_rtde::RTDEIOInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEIOInterface_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  ur_rtde::RTDEIOInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::RTDEIOInterface *)new ur_rtde::RTDEIOInterface(arg1);
+  *(ur_rtde::RTDEIOInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1RTDEIOInterface(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1ROBOT_1STATUS_1POWER_1ON_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEIOInterface::RobotStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEIOInterface::RobotStatus)ur_rtde::RTDEIOInterface::ROBOT_STATUS_POWER_ON;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1ROBOT_1STATUS_1PROGRAM_1RUNNING_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEIOInterface::RobotStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEIOInterface::RobotStatus)ur_rtde::RTDEIOInterface::ROBOT_STATUS_PROGRAM_RUNNING;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1ROBOT_1STATUS_1TEACH_1BUTTON_1PRESSED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEIOInterface::RobotStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEIOInterface::RobotStatus)ur_rtde::RTDEIOInterface::ROBOT_STATUS_TEACH_BUTTON_PRESSED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1ROBOT_1STATUS_1POWER_1BUTTON_1PRESSED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEIOInterface::RobotStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEIOInterface::RobotStatus)ur_rtde::RTDEIOInterface::ROBOT_STATUS_POWER_BUTTON_PRESSED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1reconnect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
+  result = (bool)(arg1)->reconnect();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setStandardDigitalOut(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
+  std::uint8_t arg2 ;
+  bool arg3 ;
+  std::uint8_t *argp2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = jarg3 ? true : false; 
+  result = (bool)(arg1)->setStandardDigitalOut(arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setToolDigitalOut(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
+  std::uint8_t arg2 ;
+  bool arg3 ;
+  std::uint8_t *argp2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = jarg3 ? true : false; 
+  result = (bool)(arg1)->setToolDigitalOut(arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setSpeedSlider(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
+  double arg2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
+  arg2 = (double)jarg2; 
+  result = (bool)(arg1)->setSpeedSlider(arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setAnalogOutputVoltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
+  std::uint8_t arg2 ;
+  double arg3 ;
+  std::uint8_t *argp2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->setAnalogOutputVoltage(arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEIOInterface_1setAnalogOutputCurrent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEIOInterface *arg1 = (ur_rtde::RTDEIOInterface *) 0 ;
+  std::uint8_t arg2 ;
+  double arg3 ;
+  std::uint8_t *argp2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEIOInterface **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->setAnalogOutputCurrent(arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1RTDEReceiveInterface_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_RTDEReceiveInterface = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_RTDEReceiveInterface, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_RTDEReceiveInterface = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1RTDEReceiveInterface_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_RTDEReceiveInterface;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualCurrent_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualCurrent = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualCurrent, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualCurrent = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualCurrent_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualCurrent;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualDigitalInputBits_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualDigitalInputBits = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualDigitalInputBits, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualDigitalInputBits = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualDigitalInputBits_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualDigitalInputBits;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualDigitalOutputBits_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualDigitalOutputBits = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualDigitalOutputBits, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualDigitalOutputBits = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualDigitalOutputBits_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualDigitalOutputBits;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualExecutionTime_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualExecutionTime = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualExecutionTime, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualExecutionTime = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualExecutionTime_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualExecutionTime;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualJointVoltage_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualJointVoltage = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualJointVoltage, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualJointVoltage = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualJointVoltage_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualJointVoltage;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualMainVoltage_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualMainVoltage = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualMainVoltage, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualMainVoltage = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualMainVoltage_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualMainVoltage;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualMomentum_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualMomentum = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualMomentum, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualMomentum = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualMomentum_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualMomentum;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualQ_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualQ = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualQ, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualQ = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualQ_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualQ;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualQd_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualQd = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualQd, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualQd = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualQd_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualQd;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualRobotCurrent_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualRobotCurrent = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualRobotCurrent, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualRobotCurrent = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualRobotCurrent_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualRobotCurrent;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualRobotVoltage_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualRobotVoltage = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualRobotVoltage, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualRobotVoltage = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualRobotVoltage_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualRobotVoltage;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualTCPPose_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualTCPPose = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualTCPPose, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualTCPPose = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualTCPPose_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualTCPPose;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualTCPSpeed_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualTCPSpeed = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualTCPSpeed, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualTCPSpeed = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualTCPSpeed_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualTCPSpeed;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualToolAccelerometer_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualToolAccelerometer = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getActualToolAccelerometer, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getActualToolAccelerometer = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getActualToolAccelerometer_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getActualToolAccelerometer;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getJointControlOutput_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getJointControlOutput = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getJointControlOutput, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getJointControlOutput = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getJointControlOutput_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getJointControlOutput;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getJointMode_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getJointMode = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getJointMode, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getJointMode = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getJointMode_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getJointMode;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getJointTemperatures_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getJointTemperatures = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getJointTemperatures, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getJointTemperatures = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getJointTemperatures_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getJointTemperatures;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getRobotMode_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getRobotMode = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getRobotMode, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getRobotMode = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getRobotMode_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getRobotMode;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getRobotStatus_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getRobotStatus = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getRobotStatus, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getRobotStatus = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getRobotStatus_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getRobotStatus;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getRuntimeState_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getRuntimeState = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getRuntimeState, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getRuntimeState = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getRuntimeState_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getRuntimeState;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getSafetyMode_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getSafetyMode = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getSafetyMode, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getSafetyMode = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getSafetyMode_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getSafetyMode;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getSpeedScaling_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getSpeedScaling = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getSpeedScaling, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getSpeedScaling = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getSpeedScaling_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getSpeedScaling;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getStandardAnalogInput0_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogInput0 = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogInput0, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogInput0 = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getStandardAnalogInput0_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogInput0;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getStandardAnalogInput1_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogInput1 = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogInput1, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogInput1 = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getStandardAnalogInput1_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogInput1;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getStandardAnalogOutput0_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogOutput0 = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogOutput0, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogOutput0 = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getStandardAnalogOutput0_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogOutput0;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getStandardAnalogOutput1_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogOutput1 = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogOutput1, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogOutput1 = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getStandardAnalogOutput1_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getStandardAnalogOutput1;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetCurrent_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetCurrent = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetCurrent, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetCurrent = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetCurrent_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetCurrent;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetMoment_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetMoment = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetMoment, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetMoment = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetMoment_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetMoment;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetQd_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetQd = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetQd, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetQd = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetQd_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetQd;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetQdd_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetQdd = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetQdd, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetQdd = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetQdd_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetQdd;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetSpeedFraction_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetSpeedFraction = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetSpeedFraction, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetSpeedFraction = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetSpeedFraction_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetSpeedFraction;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetTCPPose_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetTCPPose = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetTCPPose, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetTCPPose = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetTCPPose_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetTCPPose;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetTCPSpeed_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetTCPSpeed = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetTCPSpeed, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getTargetTCPSpeed = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTargetTCPSpeed_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getTargetTCPSpeed;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTimestamp_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_getTimestamp = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_getTimestamp, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_getTimestamp = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1getTimestamp_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_getTimestamp;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1hostname_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_hostname = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_hostname, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_hostname = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1hostname_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_hostname;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1isConnected_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_isConnected = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_isConnected, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_isConnected = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1isConnected_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_isConnected;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1port_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_port = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_port, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_port = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1port_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_port;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1receiveCallback_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_receiveCallback = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_receiveCallback, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_receiveCallback = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1receiveCallback_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_receiveCallback;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1reconnect_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_reconnect = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_reconnect, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_reconnect = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1reconnect_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_reconnect;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1robot_1state_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_robot_state = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_robot_state, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_robot_state = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1robot_1state_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_robot_state;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1rtde_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_rtde = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_rtde, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_rtde = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1rtde_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_rtde;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1setupRecipes_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_setupRecipes = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_setupRecipes, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_setupRecipes = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1setupRecipes_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_setupRecipes;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1stop_1thread_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_stop_thread = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_stop_thread, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_stop_thread = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1stop_1thread_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_stop_thread;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1th_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_th = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_th, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_th = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1th_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_th;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1variables_1set(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  char *arg1 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
+    if (!arg1) return ;
+  }
+  {
+    if (arg1) {
+      __doc_ur_rtde_RTDEReceiveInterface_variables = (char const *) (new char[strlen((const char *)arg1)+1]);
+      strcpy((char *)__doc_ur_rtde_RTDEReceiveInterface_variables, (const char *)arg1);
+    } else {
+      __doc_ur_rtde_RTDEReceiveInterface_variables = 0;
+    }
+  }
+  if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI__1_1doc_1ur_1rtde_1RTDEReceiveInterface_1variables_1get(JNIEnv *jenv, jclass jcls) {
+  jstring jresult = 0 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (char *)__doc_ur_rtde_RTDEReceiveInterface_variables;
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEReceiveInterface_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jlong jarg2, jobject jarg2_, jint jarg3, jboolean jarg4) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  std::vector< std::string > arg2 ;
+  int arg3 ;
+  bool arg4 ;
+  std::vector< std::string > *argp2 ;
+  ur_rtde::RTDEReceiveInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  argp2 = *(std::vector< std::string > **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< std::string >");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = (int)jarg3; 
+  arg4 = jarg4 ? true : false; 
+  result = (ur_rtde::RTDEReceiveInterface *)new ur_rtde::RTDEReceiveInterface(arg1,arg2,arg3,arg4);
+  *(ur_rtde::RTDEReceiveInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEReceiveInterface_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jlong jarg2, jobject jarg2_, jint jarg3) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  std::vector< std::string > arg2 ;
+  int arg3 ;
+  std::vector< std::string > *argp2 ;
+  ur_rtde::RTDEReceiveInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  argp2 = *(std::vector< std::string > **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< std::string >");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = (int)jarg3; 
+  result = (ur_rtde::RTDEReceiveInterface *)new ur_rtde::RTDEReceiveInterface(arg1,arg2,arg3);
+  *(ur_rtde::RTDEReceiveInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEReceiveInterface_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jlong jarg2, jobject jarg2_) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  std::vector< std::string > arg2 ;
+  std::vector< std::string > *argp2 ;
+  ur_rtde::RTDEReceiveInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  argp2 = *(std::vector< std::string > **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< std::string >");
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (ur_rtde::RTDEReceiveInterface *)new ur_rtde::RTDEReceiveInterface(arg1,arg2);
+  *(ur_rtde::RTDEReceiveInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEReceiveInterface_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  ur_rtde::RTDEReceiveInterface *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::RTDEReceiveInterface *)new ur_rtde::RTDEReceiveInterface(arg1);
+  *(ur_rtde::RTDEReceiveInterface **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1RTDEReceiveInterface(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1NORMAL_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_NORMAL_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1REDUCED_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_REDUCED_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1PROTECTIVE_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_PROTECTIVE_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1RECOVERY_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_RECOVERY_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1SAFEGUARD_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_SAFEGUARD_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1SYSTEM_1EMERGENCY_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_SYSTEM_EMERGENCY_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1ROBOT_1EMERGENCY_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_ROBOT_EMERGENCY_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1EMERGENCY_1STOPPED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_EMERGENCY_STOPPED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1VIOLATION_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_VIOLATION;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1FAULT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_FAULT;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1IS_1STOPPED_1DUE_1TO_1SAFETY_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface::SafetyStatus result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEReceiveInterface::SafetyStatus)ur_rtde::RTDEReceiveInterface::IS_STOPPED_DUE_TO_SAFETY;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1disconnect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  (arg1)->disconnect();
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1reconnect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (bool)(arg1)->reconnect();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1isConnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (bool)(arg1)->isConnected();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTimestamp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getTimestamp();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTargetQ(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getTargetQ();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTargetQd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getTargetQd();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTargetQdd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getTargetQdd();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTargetCurrent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getTargetCurrent();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTargetMoment(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getTargetMoment();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualQ(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualQ();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualQd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualQd();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualCurrent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualCurrent();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getJointControlOutput(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getJointControlOutput();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualTCPPose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualTCPPose();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualTCPSpeed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualTCPSpeed();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualTCPForce(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualTCPForce();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTargetTCPPose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getTargetTCPPose();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTargetTCPSpeed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getTargetTCPSpeed();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualDigitalInputBits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  uint64_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualDigitalInputBits();
+  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getJointTemperatures(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getJointTemperatures();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualExecutionTime(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getActualExecutionTime();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getRobotMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getRobotMode();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getRobotStatus(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getRobotStatus();
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getJointMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  SwigValueWrapper< std::vector< int32_t > > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getJointMode();
+  *(std::vector< int32_t > **)&jresult = new std::vector< int32_t >((const std::vector< int32_t > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getSafetyMode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getSafetyMode();
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getSafetyStatusBits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getSafetyStatusBits();
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualToolAccelerometer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualToolAccelerometer();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getSpeedScaling(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getSpeedScaling();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getTargetSpeedFraction(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getTargetSpeedFraction();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualMomentum(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getActualMomentum();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualMainVoltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getActualMainVoltage();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualRobotVoltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getActualRobotVoltage();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualRobotCurrent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getActualRobotCurrent();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualJointVoltage(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualJointVoltage();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getActualDigitalOutputBits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  uint64_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getActualDigitalOutputBits();
+  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getDigitalOutState(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  std::uint8_t arg2 ;
+  std::uint8_t *argp2 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (bool)(arg1)->getDigitalOutState(arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getRuntimeState(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (arg1)->getRuntimeState();
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getStandardAnalogInput0(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getStandardAnalogInput0();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getStandardAnalogInput1(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getStandardAnalogInput1();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getStandardAnalogOutput0(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getStandardAnalogOutput0();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1getStandardAnalogOutput1(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (double)(arg1)->getStandardAnalogOutput1();
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1isProtectiveStopped(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (bool)(arg1)->isProtectiveStopped();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1isEmergencyStopped(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  result = (bool)(arg1)->isEmergencyStopped();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEReceiveInterface_1receiveCallback(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDEReceiveInterface *arg1 = (ur_rtde::RTDEReceiveInterface *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDEReceiveInterface **)&jarg1; 
+  (arg1)->receiveCallback();
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packUInt32(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  uint32_t arg1 ;
+  uint32_t *argp1 ;
+  std::vector< char > result;
+  
+  (void)jenv;
+  (void)jcls;
+  argp1 = *(uint32_t **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = ur_rtde::RTDEUtility::packUInt32(arg1);
+  *(std::vector< char > **)&jresult = new std::vector< char >((const std::vector< char > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packInt32(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  int32_t arg1 ;
+  int32_t *argp1 ;
+  std::vector< char > result;
+  
+  (void)jenv;
+  (void)jcls;
+  argp1 = *(int32_t **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = ur_rtde::RTDEUtility::packInt32(arg1);
+  *(std::vector< char > **)&jresult = new std::vector< char >((const std::vector< char > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packVectorNInt32(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  SwigValueWrapper< std::vector< int32_t > > arg1 ;
+  std::vector< int32_t > *argp1 ;
+  std::vector< char > result;
+  
+  (void)jenv;
+  (void)jcls;
+  argp1 = *(std::vector< int32_t > **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< int32_t >");
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = ur_rtde::RTDEUtility::packVectorNInt32(arg1);
+  *(std::vector< char > **)&jresult = new std::vector< char >((const std::vector< char > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packVectorNd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< double > arg1 ;
+  std::vector< double > *argp1 ;
+  std::vector< char > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  argp1 = *(std::vector< double > **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< double >");
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = ur_rtde::RTDEUtility::packVectorNd(arg1);
+  *(std::vector< char > **)&jresult = new std::vector< char >((const std::vector< char > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1packDouble(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
+  jlong jresult = 0 ;
+  double arg1 ;
+  std::vector< char > result;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (double)jarg1; 
+  result = ur_rtde::RTDEUtility::packDouble(arg1);
+  *(std::vector< char > **)&jresult = new std::vector< char >((const std::vector< char > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1unpackVector3d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = ur_rtde::RTDEUtility::unpackVector3d((std::vector< char > const &)*arg1,*arg2);
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1unpackVector6d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = ur_rtde::RTDEUtility::unpackVector6d((std::vector< char > const &)*arg1,*arg2);
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1unpackVector6Int32(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  SwigValueWrapper< std::vector< int32_t > > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = ur_rtde::RTDEUtility::unpackVector6Int32((std::vector< char > const &)*arg1,*arg2);
+  *(std::vector< int32_t > **)&jresult = new std::vector< int32_t >((const std::vector< int32_t > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getDouble(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jdouble jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = (double)ur_rtde::RTDEUtility::getDouble((std::vector< char > const &)*arg1,*arg2);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getUInt32(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = ur_rtde::RTDEUtility::getUInt32((std::vector< char > const &)*arg1,*arg2);
+  *(uint32_t **)&jresult = new uint32_t((const uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getUInt16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  uint16_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = ur_rtde::RTDEUtility::getUInt16((std::vector< char > const &)*arg1,*arg2);
+  *(uint16_t **)&jresult = new uint16_t((const uint16_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getInt32(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = ur_rtde::RTDEUtility::getInt32((std::vector< char > const &)*arg1,*arg2);
+  *(int32_t **)&jresult = new int32_t((const int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getUInt64(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  uint64_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = ur_rtde::RTDEUtility::getUInt64((std::vector< char > const &)*arg1,*arg2);
+  *(uint64_t **)&jresult = new uint64_t((const uint64_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jshort JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1getUChar(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jshort jresult = 0 ;
+  std::vector< char > *arg1 = 0 ;
+  uint32_t *arg2 = 0 ;
+  unsigned char result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< char > **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< char > const & reference is null");
+    return 0;
+  } 
+  arg2 = *(uint32_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
+    return 0;
+  } 
+  result = (unsigned char)ur_rtde::RTDEUtility::getUChar((std::vector< char > const &)*arg1,*arg2);
+  jresult = (jshort)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1double2hexstr(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
+  jstring jresult = 0 ;
+  double arg1 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (double)jarg1; 
+  result = ur_rtde::RTDEUtility::double2hexstr(arg1);
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1hexToBytes(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jlong jresult = 0 ;
+  std::string *arg1 = 0 ;
+  std::vector< char > result;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = ur_rtde::RTDEUtility::hexToBytes((std::string const &)*arg1);
+  *(std::vector< char > **)&jresult = new std::vector< char >((const std::vector< char > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1hexDump(JNIEnv *jenv, jclass jcls, jlong jarg1, jstring jarg2, jlong jarg3) {
+  jlong jresult = 0 ;
+  std::ostream *arg1 = 0 ;
+  char *arg2 = (char *) 0 ;
+  std::size_t arg3 ;
+  std::ostream *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::ostream **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::ostream & reference is null");
+    return 0;
+  } 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = (std::size_t)jarg3; 
+  result = (std::ostream *) &ur_rtde::RTDEUtility::hexDump(*arg1,(char const *)arg2,arg3);
+  *(std::ostream **)&jresult = result; 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDEUtility_1split(JNIEnv *jenv, jclass jcls, jstring jarg1, jchar jarg2) {
+  jlong jresult = 0 ;
+  std::string *arg1 = 0 ;
+  char arg2 ;
+  std::vector< std::string > result;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (char)jarg2; 
+  result = ur_rtde::RTDEUtility::split((std::string const &)*arg1,arg2);
+  *(std::vector< std::string > **)&jresult = new std::vector< std::string >((const std::vector< std::string > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDEUtility(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDEUtility *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDEUtility *)new ur_rtde::RTDEUtility();
+  *(ur_rtde::RTDEUtility **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1RTDEUtility(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::RTDEUtility *arg1 = (ur_rtde::RTDEUtility *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::RTDEUtility **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDE_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jboolean jarg3) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  int arg2 ;
+  bool arg3 ;
+  ur_rtde::RTDE *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (int)jarg2; 
+  arg3 = jarg3 ? true : false; 
+  result = (ur_rtde::RTDE *)new ur_rtde::RTDE(arg1,arg2,arg3);
+  *(ur_rtde::RTDE **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDE_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  int arg2 ;
+  ur_rtde::RTDE *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  arg2 = (int)jarg2; 
+  result = (ur_rtde::RTDE *)new ur_rtde::RTDE(arg1,arg2);
+  *(ur_rtde::RTDE **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDE_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  ur_rtde::RTDE *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (ur_rtde::RTDE *)new ur_rtde::RTDE(arg1);
+  *(ur_rtde::RTDE **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1RTDE(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1NO_1CMD_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::NO_CMD;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1MOVEJ_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::MOVEJ;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1MOVEJ_1IK_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::MOVEJ_IK;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1MOVEL_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::MOVEL;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1MOVEL_1FK_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::MOVEL_FK;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1MOVEC_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::MOVEC;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1FORCE_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::FORCE_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1FORCE_1MODE_1STOP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::FORCE_MODE_STOP;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1ZERO_1FT_1SENSOR_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::ZERO_FT_SENSOR;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SPEEDJ_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SPEEDJ;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SPEEDL_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SPEEDL;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SERVOJ_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SERVOJ;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SERVOC_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SERVOC;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SET_1STD_1DIGITAL_1OUT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SET_STD_DIGITAL_OUT;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SET_1TOOL_1DIGITAL_1OUT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SET_TOOL_DIGITAL_OUT;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SPEED_1STOP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SPEED_STOP;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SERVO_1STOP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SERVO_STOP;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SET_1PAYLOAD_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SET_PAYLOAD;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1TEACH_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::TEACH_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1END_1TEACH_1MODE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::END_TEACH_MODE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1FORCE_1MODE_1SET_1DAMPING_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::FORCE_MODE_SET_DAMPING;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1FORCE_1MODE_1SET_1GAIN_1SCALING_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::FORCE_MODE_SET_GAIN_SCALING;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SET_1SPEED_1SLIDER_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SET_SPEED_SLIDER;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SET_1STD_1ANALOG_1OUT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SET_STD_ANALOG_OUT;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SERVOL_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SERVOL;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1TOOL_1CONTACT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::TOOL_CONTACT;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1GET_1STEPTIME_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::GET_STEPTIME;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1GET_1ACTUAL_1JOINT_1POSITIONS_1HISTORY_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::GET_ACTUAL_JOINT_POSITIONS_HISTORY;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1GET_1TARGET_1WAYPOINT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::GET_TARGET_WAYPOINT;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SET_1TCP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SET_TCP;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1GET_1INVERSE_1KINEMATICS_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::GET_INVERSE_KINEMATICS;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1PROTECTIVE_1STOP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::PROTECTIVE_STOP;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1MOVEP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::MOVEP;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1STOPL_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::STOPL;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1STOPJ_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::STOPJ;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1SET_1WATCHDOG_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::SET_WATCHDOG;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1IS_1POSE_1WITHIN_1SAFETY_1LIMITS_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::IS_POSE_WITHIN_SAFETY_LIMITS;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1IS_1JOINTS_1WITHIN_1SAFETY_1LIMITS_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::IS_JOINTS_WITHIN_SAFETY_LIMITS;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1GET_1JOINT_1TORQUES_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::GET_JOINT_TORQUES;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1POSE_1TRANS_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::POSE_TRANS;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1STOP_1SCRIPT_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Type)ur_rtde::RTDE::RobotCommand::STOP_SCRIPT;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_11_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_1;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_12_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_2;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_13_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_3;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_14_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_4;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_15_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_5;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_16_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_6;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_17_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_7;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_18_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_8;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_19_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_9;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_110_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_10;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_111_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_11;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_112_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_12;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1RECIPE_113_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand::Recipe result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand::Recipe)ur_rtde::RTDE::RobotCommand::RECIPE_13;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1RTDE_1RobotCommand(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RobotCommand *)new ur_rtde::RTDE::RobotCommand();
+  *(ur_rtde::RTDE::RobotCommand **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1type_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  ur_rtde::RTDE::RobotCommand::Type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  arg2 = (ur_rtde::RTDE::RobotCommand::Type)jarg2; 
+  if (arg1) (arg1)->type_ = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1type_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  ur_rtde::RTDE::RobotCommand::Type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result = (ur_rtde::RTDE::RobotCommand::Type) ((arg1)->type_);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1recipe_1id_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t arg2 ;
+  std::uint8_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->recipe_id_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1recipe_1id_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->recipe_id_);
+  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1val_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::vector< double > *arg2 = (std::vector< double > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2; 
+  if (arg1) (arg1)->val_ = *arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1val_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::vector< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result = (std::vector< double > *)& ((arg1)->val_);
+  *(std::vector< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1selection_1vector_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::vector< int > *arg2 = (std::vector< int > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  arg2 = *(std::vector< int > **)&jarg2; 
+  if (arg1) (arg1)->selection_vector_ = *arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1selection_1vector_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::vector< int > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result = (std::vector< int > *)& ((arg1)->selection_vector_);
+  *(std::vector< int > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1movec_1mode_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::int32_t arg2 ;
+  std::int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->movec_mode_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1movec_1mode_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->movec_mode_);
+  *(std::int32_t **)&jresult = new std::int32_t((const std::int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1force_1mode_1type_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::int32_t arg2 ;
+  std::int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->force_mode_type_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1force_1mode_1type_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->force_mode_type_);
+  *(std::int32_t **)&jresult = new std::int32_t((const std::int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t arg2 ;
+  std::uint8_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->std_digital_out_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->std_digital_out_);
+  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t arg2 ;
+  std::uint8_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->std_digital_out_mask_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1digital_1out_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->std_digital_out_mask_);
+  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t arg2 ;
+  std::uint8_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->std_tool_out_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->std_tool_out_);
+  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t arg2 ;
+  std::uint8_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->std_tool_out_mask_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1tool_1out_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->std_tool_out_mask_);
+  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t arg2 ;
+  std::uint8_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->std_analog_output_mask_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->std_analog_output_mask_);
+  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1type_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t arg2 ;
+  std::uint8_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::uint8_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint8_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->std_analog_output_type_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_1type_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint8_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->std_analog_output_type_);
+  *(std::uint8_t **)&jresult = new std::uint8_t((const std::uint8_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_10_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->std_analog_output_0_ = arg2;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_10_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result = (double) ((arg1)->std_analog_output_0_);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_11_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->std_analog_output_1_ = arg2;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1std_1analog_1output_11_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result = (double) ((arg1)->std_analog_output_1_);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1speed_1slider_1mask_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::int32_t arg2 ;
+  std::int32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::int32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::int32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->speed_slider_mask_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1speed_1slider_1mask_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::int32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->speed_slider_mask_);
+  *(std::int32_t **)&jresult = new std::int32_t((const std::int32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1speed_1slider_1fraction_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->speed_slider_fraction_ = arg2;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1speed_1slider_1fraction_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result = (double) ((arg1)->speed_slider_fraction_);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1steps_1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint32_t arg2 ;
+  std::uint32_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  argp2 = *(std::uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::uint32_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->steps_ = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RobotCommand_1steps_1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  std::uint32_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  result =  ((arg1)->steps_);
+  *(std::uint32_t **)&jresult = new std::uint32_t((const std::uint32_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1RTDE_1RobotCommand(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::RTDE::RobotCommand *arg1 = (ur_rtde::RTDE::RobotCommand *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::RTDE::RobotCommand **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RTDE_1REQUEST_1PROTOCOL_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RTDECommand result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RTDECommand)ur_rtde::RTDE::RTDE_REQUEST_PROTOCOL_VERSION;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RTDE_1GET_1URCONTROL_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RTDECommand result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RTDECommand)ur_rtde::RTDE::RTDE_GET_URCONTROL_VERSION;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RTDE_1TEXT_1MESSAGE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RTDECommand result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RTDECommand)ur_rtde::RTDE::RTDE_TEXT_MESSAGE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RTDE_1DATA_1PACKAGE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RTDECommand result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RTDECommand)ur_rtde::RTDE::RTDE_DATA_PACKAGE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RTDE_1CONTROL_1PACKAGE_1SETUP_1OUTPUTS_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RTDECommand result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RTDECommand)ur_rtde::RTDE::RTDE_CONTROL_PACKAGE_SETUP_OUTPUTS;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RTDE_1CONTROL_1PACKAGE_1SETUP_1INPUTS_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RTDECommand result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RTDECommand)ur_rtde::RTDE::RTDE_CONTROL_PACKAGE_SETUP_INPUTS;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RTDE_1CONTROL_1PACKAGE_1START_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RTDECommand result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RTDECommand)ur_rtde::RTDE::RTDE_CONTROL_PACKAGE_START;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1RTDE_1CONTROL_1PACKAGE_1PAUSE_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::RTDECommand result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::RTDECommand)ur_rtde::RTDE::RTDE_CONTROL_PACKAGE_PAUSE;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1ConnectionState_1DISCONNECTED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::ConnectionState result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::ConnectionState)ur_rtde::RTDE::ConnectionState::DISCONNECTED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1ConnectionState_1CONNECTED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::ConnectionState result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::ConnectionState)ur_rtde::RTDE::ConnectionState::CONNECTED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1ConnectionState_1STARTED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::ConnectionState result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::ConnectionState)ur_rtde::RTDE::ConnectionState::STARTED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1ConnectionState_1PAUSED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::RTDE::ConnectionState result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::RTDE::ConnectionState)ur_rtde::RTDE::ConnectionState::PAUSED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1connect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  (arg1)->connect();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1disconnect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  (arg1)->disconnect();
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1isConnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  result = (bool)(arg1)->isConnected();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1isStarted(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  result = (bool)(arg1)->isStarted();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1negotiateProtocolVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  result = (bool)(arg1)->negotiateProtocolVersion();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1getControllerVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  std::tuple< std::uint32_t,std::uint32_t,std::uint32_t,std::uint32_t > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  result = (arg1)->getControllerVersion();
+  *(std::tuple< std::uint32_t,std::uint32_t,std::uint32_t,std::uint32_t > **)&jresult = new std::tuple< std::uint32_t,std::uint32_t,std::uint32_t,std::uint32_t >((const std::tuple< std::uint32_t,std::uint32_t,std::uint32_t,std::uint32_t > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1receive(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  (arg1)->receive();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1receiveData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  std::shared_ptr< ur_rtde::RobotState > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  arg2 = *(std::shared_ptr< ur_rtde::RobotState > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< ur_rtde::RobotState > & reference is null");
+    return ;
+  } 
+  (arg1)->receiveData(*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1send(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  ur_rtde::RTDE::RobotCommand *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  arg2 = *(ur_rtde::RTDE::RobotCommand **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "ur_rtde::RTDE::RobotCommand const & reference is null");
+    return ;
+  } 
+  (arg1)->send((ur_rtde::RTDE::RobotCommand const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendAll_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jstring jarg3) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  std::uint8_t *arg2 = 0 ;
+  std::string arg3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  arg2 = *(std::uint8_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::uint8_t const & reference is null");
+    return ;
+  } 
+  if(!jarg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  } 
+  const char *arg3_pstr = (const char *)jenv->GetStringUTFChars(jarg3, 0); 
+  if (!arg3_pstr) return ;
+  (&arg3)->assign(arg3_pstr);
+  jenv->ReleaseStringUTFChars(jarg3, arg3_pstr); 
+  (arg1)->sendAll((std::uint8_t const &)*arg2,arg3);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendAll_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  std::uint8_t *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  arg2 = *(std::uint8_t **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::uint8_t const & reference is null");
+    return ;
+  } 
+  (arg1)->sendAll((std::uint8_t const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendStart(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  (arg1)->sendStart();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendPause(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  (arg1)->sendPause();
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendOutputSetup(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  std::vector< std::string > *arg2 = 0 ;
+  double arg3 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  arg2 = *(std::vector< std::string > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::string > const & reference is null");
+    return 0;
+  } 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->sendOutputSetup((std::vector< std::string > const &)*arg2,arg3);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_RTDE_1sendInputSetup(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  ur_rtde::RTDE *arg1 = (ur_rtde::RTDE *) 0 ;
+  std::vector< std::string > *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(ur_rtde::RTDE **)&jarg1; 
+  arg2 = *(std::vector< std::string > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::string > const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->sendInputSetup((std::vector< std::string > const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1ScriptClient_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jlong jarg2, jlong jarg3, jint jarg4, jboolean jarg5) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  uint32_t arg2 ;
+  uint32_t arg3 ;
+  int arg4 ;
+  bool arg5 ;
+  uint32_t *argp2 ;
+  uint32_t *argp3 ;
+  ur_rtde::ScriptClient *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  argp2 = *(uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  argp3 = *(uint32_t **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return 0;
+  }
+  arg3 = *argp3; 
+  arg4 = (int)jarg4; 
+  arg5 = jarg5 ? true : false; 
+  result = (ur_rtde::ScriptClient *)new ur_rtde::ScriptClient(arg1,arg2,arg3,arg4,arg5);
+  *(ur_rtde::ScriptClient **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1ScriptClient_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jlong jarg2, jlong jarg3, jint jarg4) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  uint32_t arg2 ;
+  uint32_t arg3 ;
+  int arg4 ;
+  uint32_t *argp2 ;
+  uint32_t *argp3 ;
+  ur_rtde::ScriptClient *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  argp2 = *(uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  argp3 = *(uint32_t **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return 0;
+  }
+  arg3 = *argp3; 
+  arg4 = (int)jarg4; 
+  result = (ur_rtde::ScriptClient *)new ur_rtde::ScriptClient(arg1,arg2,arg3,arg4);
+  *(ur_rtde::ScriptClient **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_new_1ScriptClient_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jlong jarg2, jlong jarg3) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  uint32_t arg2 ;
+  uint32_t arg3 ;
+  uint32_t *argp2 ;
+  uint32_t *argp3 ;
+  ur_rtde::ScriptClient *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  argp2 = *(uint32_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  argp3 = *(uint32_t **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
+    return 0;
+  }
+  arg3 = *argp3; 
+  result = (ur_rtde::ScriptClient *)new ur_rtde::ScriptClient(arg1,arg2,arg3);
+  *(ur_rtde::ScriptClient **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_delete_1ScriptClient(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ur_rtde::ScriptClient *arg1 = (ur_rtde::ScriptClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ur_rtde::ScriptClient **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_ScriptClient_1ConnectionState_1DISCONNECTED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::ScriptClient::ConnectionState result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::ScriptClient::ConnectionState)ur_rtde::ScriptClient::ConnectionState::DISCONNECTED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_ScriptClient_1ConnectionState_1CONNECTED_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  ur_rtde::ScriptClient::ConnectionState result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (ur_rtde::ScriptClient::ConnectionState)ur_rtde::ScriptClient::ConnectionState::CONNECTED;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_ScriptClient_1connect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::ScriptClient *arg1 = (ur_rtde::ScriptClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::ScriptClient **)&jarg1; 
+  (arg1)->connect();
+}
+
+
+SWIGEXPORT void JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_ScriptClient_1disconnect(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  ur_rtde::ScriptClient *arg1 = (ur_rtde::ScriptClient *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::ScriptClient **)&jarg1; 
+  (arg1)->disconnect();
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_ScriptClient_1isConnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::ScriptClient *arg1 = (ur_rtde::ScriptClient *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::ScriptClient **)&jarg1; 
+  result = (bool)(arg1)->isConnected();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_ScriptClient_1sendScript_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  ur_rtde::ScriptClient *arg1 = (ur_rtde::ScriptClient *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::ScriptClient **)&jarg1; 
+  result = (bool)(arg1)->sendScript();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_ScriptClient_1sendScript_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::ScriptClient *arg1 = (ur_rtde::ScriptClient *) 0 ;
+  std::string *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::ScriptClient **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = (bool)(arg1)->sendScript((std::string const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_de_dhbw_rahmlab_RTDE_impl_RTDE_1MODULEJNI_ScriptClient_1sendScriptCommand(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jboolean jresult = 0 ;
+  ur_rtde::ScriptClient *arg1 = (ur_rtde::ScriptClient *) 0 ;
+  std::string *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(ur_rtde::ScriptClient **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = (bool)(arg1)->sendScriptCommand((std::string const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
 }
 
 
