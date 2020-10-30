@@ -12,9 +12,9 @@ gcc -shared -fPIC -cpp -std=c++17 -O3 -flto ../swig/rtde_wrap.cpp -Lbuild  -I/us
 echo "gcc finished"
 
 #Has to be: <Project Folder>/natives/<os-arch> !!
-mkdir -p ../JAVA/natives/linux-amd64/
-cp ./*.so* ../JAVA/natives/linux-amd64/
-cp ./build/*.so* ../JAVA/natives/linux-amd64/
+mkdir -p ../JRTDE/natives/linux-amd64/
+cp ./*.so* ../JRTDE/natives/linux-amd64/
+cp ./build/*.so* ../JRTDE/natives/linux-amd64/
 
 echo "Linux64 finished"
 
