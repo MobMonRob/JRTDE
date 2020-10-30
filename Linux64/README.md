@@ -1,7 +1,7 @@
 # Java-Wrapper für ViconDataStream
 
 ## Beschreibung
-Dieses Projekt erzeugt einen Java Wrapper um die Vicon DataStream API unter `Ubuntu 18.04 x64` per `Bashskript`.
+Dieses Projekt erzeugt einen Java Wrapper für die RTDE API unter `Ubuntu 18.04 x64` per `Bashskript`.
 
 ## Benötigte Software
 * `Ubuntu 18.04 x64`
@@ -21,7 +21,7 @@ Dieses Projekt erzeugt einen Java Wrapper um die Vicon DataStream API unter `Ubu
 
 ## Dateien generieren
 Projekt in `git pull`en.\
-Mit Klick auf die `wrapper_so_generator.sh` Datei im Projektverzeichnis unter `/Linux64` den Prozess anstoßen.
+Mit Klick auf die `generate.sh` Datei im Projektverzeichnis unter `/Linux64` den Prozess anstoßen.
 
-Die Java Dateien befinden sich jetzt in `JViconDataStreamTest` und die `.so` Datei in `/Linux64`.
+Die Java Dateien befinden sich jetzt in `JRTDE` und die `.so` Dateien in `JRTDE/natvives/linux-amd64`.
 

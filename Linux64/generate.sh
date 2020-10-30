@@ -7,7 +7,7 @@ cd "$(dirname "$BASH_SOURCE")"
 ../swig/generate.sh
 
 #https://web.archive.org/web/20201007174747/https://stackoverflow.com/questions/54373254/load-dependent-so-from-other-shared-library-via-jni/58842312#58842312
-gcc -shared -fPIC -cpp -std=c++17 -O3 -flto ../swig/RTDE_wrap.cpp -Lbuild  -I/usr/lib/jvm/java-14-openjdk-amd64/include -I/usr/lib/jvm/java-14-openjdk-amd64/include/linux -Wl,-rpath,'$ORIGIN/.'
+gcc -shared -fPIC -cpp -std=c++17 -O3 -flto ../swig/rtde_wrap.cpp -Lbuild  -I/usr/lib/jvm/java-14-openjdk-amd64/include -I/usr/lib/jvm/java-14-openjdk-amd64/include/linux -Wl,-rpath,'$ORIGIN/.'
 
 echo "gcc finished"
 
