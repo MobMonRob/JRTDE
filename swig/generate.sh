@@ -2,7 +2,7 @@
 
 cd "$(dirname "$BASH_SOURCE")"
 
-rm ../JRTDE/src/main/java/de/dhbw/rahmlab/rtde/impl/*
+rm ../JRTDE/src/main/java/de/dhbw/rahmlab/rtde/impl/* &> /dev/null
 
 echo "JAVA files cleared"
 
