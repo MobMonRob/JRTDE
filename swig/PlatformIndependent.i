@@ -1,4 +1,7 @@
 %module RTDE_MODULE
+
+%javaconst(1);
+
 //%include "std_unordered_map.i"
 %include "std_shared_ptr.i";
 %include "std_string.i";
@@ -9,6 +12,7 @@
 //%include "std_pair.i"
 %include "stdint.i";
 
+%ignore __doc_ur_rtde_RTDEReceiveInterface;
 
 
 #include <iostream>
@@ -17,7 +21,7 @@
 
 //#define SWIG_SHARED_PTR_NAMESPACE std
 
-#include "../Linux64/ur_rtde/rtde_control_interface_doc.h"
+//#include "../Linux64/ur_rtde/rtde_control_interface_doc.h" //not needed, causes erros
 #include "../Linux64/ur_rtde/dashboard_enums.h"
 #include "../Linux64/ur_rtde/dashboard_client.h"
 #include "../Linux64/ur_rtde/robot_state.h"
@@ -26,7 +30,7 @@
 
 #include "../Linux64/ur_rtde/rtde_io_interface_doc.h"
 #include "../Linux64/ur_rtde/rtde_io_interface.h"
-#include "../Linux64/ur_rtde/rtde_receive_interface_doc.h"
+//#include "../Linux64/ur_rtde/rtde_receive_interface_doc.h" //not needed, causes erros
 #include "../Linux64/ur_rtde/rtde_receive_interface.h"
 #include "../Linux64/ur_rtde/rtde_utility.h"
 #include "../Linux64/ur_rtde/rtde.h"
@@ -67,7 +71,7 @@ class parseSafetyMode {
 
 class ProgramState {
 };
- 
+
 
 
 
@@ -101,16 +105,16 @@ class ProgramState {
 
 %include "../Linux64/ur_rtde/rtde_export.h"
 
-%include "../Linux64/ur_rtde/rtde_control_interface_doc.h"
+//%include "../Linux64/ur_rtde/rtde_control_interface_doc.h" //not needed, causes erros
 %include "../Linux64/ur_rtde/dashboard_enums.h"
 %include "../Linux64/ur_rtde/dashboard_client.h"
 %include "../Linux64/ur_rtde/robot_state.h"
 %include "../Linux64/ur_rtde/rtde_control_interface.h"
 %include "../Linux64/ur_rtde/rtde_control_script.h"
 
-%include "../Linux64/ur_rtde/rtde_io_interface_doc.h"
+//%include "../Linux64/ur_rtde/rtde_io_interface_doc.h" //not needed, causes erros
 %include "../Linux64/ur_rtde/rtde_io_interface.h"
-%include "../Linux64/ur_rtde/rtde_receive_interface_doc.h"
+//%include "../Linux64/ur_rtde/rtde_receive_interface_doc.h" //not needed, causes erros
 %include "../Linux64/ur_rtde/rtde_receive_interface.h"
 %include "../Linux64/ur_rtde/rtde_utility.h"
 %include "../Linux64/ur_rtde/rtde.h"
