@@ -1,7 +1,5 @@
 %module RTDE_MODULE
 
-%javaconst(1);
-
 //%include "std_unordered_map.i"
 %include "std_shared_ptr.i";
 %include "std_string.i";
@@ -11,9 +9,6 @@
 //%include "std/std_iostream.i";
 //%include "std_pair.i"
 %include "stdint.i";
-
-%ignore __doc_ur_rtde_RTDEReceiveInterface;
-
 
 #include <iostream>
 #include "../Linux64/ur_rtde/rtde_export.h"
