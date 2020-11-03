@@ -1,8 +1,9 @@
 %module RTDE_MODULE
-
+%include ur_rtde.i
 
 %javaconst(1);
 //%include <swigarch.i>
+
 
 //%include "std_unordered_map.i"
 %include "std_shared_ptr.i";
@@ -22,7 +23,7 @@
 //%include "cpointer.i"
 //%include "stl.i" 
 %apply uint32_t&  INOUT { uint32_t&  }; 
-%include rtde.i
+
 %ignore __doc_ur_rtde_RTDEReceiveInterface;
 
 
@@ -31,11 +32,11 @@
 #include <iostream>
 #include "../Linux64/ur_rtde/rtde_export.h"
 #define RTDE_EXPORT
-#include <memory>;
+//#include <memory>;
 
 
 
-
+#include "../Linux64/ur_rtde/rtde.h"
 
 
 //typedef unsigned int		uint32_t;
@@ -52,10 +53,11 @@
 //#include "../Linux64/ur_rtde/rtde_receive_interface_doc.h" //not needed, causes erros
 #include "../Linux64/ur_rtde/rtde_receive_interface.h"
 #include "../Linux64/ur_rtde/rtde_utility.h"
-#include "../Linux64/ur_rtde/rtde.h"
-#include "../Linux64/ur_rtde/script_client.h"
 
-%immutable ur_rtde;
+#include "../Linux64/ur_rtde/script_client.h"
+using namespace ur_rtde;
+//%feature("nspace") ur_rtde::RobotState;
+//%immutable ur_rtde;
 %include <boost_shared_ptr.i>;
 %template(VectorDouble) std::vector<double>;
 %template(VectorInt) std::vector<int>;
@@ -98,4 +100,4 @@
 %include "../Linux64/ur_rtde/rtde.h"
 %include "../Linux64/ur_rtde/script_client.h"
 
-using namespace rtde;
+
