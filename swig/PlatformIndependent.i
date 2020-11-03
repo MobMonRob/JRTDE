@@ -1,7 +1,9 @@
 %module RTDE_MODULE
 
+
 %javaconst(1);
 //%include <swigarch.i>
+
 //%include "std_unordered_map.i"
 %include "std_shared_ptr.i";
 %include "std_string.i";
@@ -15,13 +17,13 @@
 //%include "std/std_iostream.i";
 //%include "std_pair.i"
 %include "stdint.i";
+
 %include "java/typemaps.i" 
 //%include "cpointer.i"
 //%include "stl.i" 
 %apply uint32_t&  INOUT { uint32_t&  }; 
 %include rtde.i
 %ignore __doc_ur_rtde_RTDEReceiveInterface;
-
 
 
 
@@ -79,7 +81,6 @@
 
 
 /////////////////////////////////
-
 %include "../Linux64/ur_rtde/rtde_export.h"
 
 //%include "../Linux64/ur_rtde/rtde_control_interface_doc.h" //not needed, causes erros
