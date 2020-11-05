@@ -1,6 +1,6 @@
 %module RTDE_MODULE
 %include ur_rtde.i
-
+%include "nspace.i";
 %javaconst(1);
 //%include <swigarch.i>
 
@@ -26,7 +26,7 @@
 
 %ignore __doc_ur_rtde_RTDEReceiveInterface;
 
-
+//%rename (ur_rtde_RobotState) ur_rtde::RobotState;
 
 
 #include <iostream>
@@ -42,21 +42,25 @@
 //typedef unsigned int		uint32_t;
 
 //#include "../Linux64/ur_rtde/rtde_control_interface_doc.h" //not needed, causes erros
-#include "../Linux64/ur_rtde/dashboard_enums.h"
-#include "../Linux64/ur_rtde/dashboard_client.h"
-#include "../Linux64/ur_rtde/robot_state.h"
-#include "../Linux64/ur_rtde/rtde_control_interface.h"
-#include "../Linux64/ur_rtde/rtde_control_script.h"
+//#include "../Linux64/ur_rtde/dashboard_enums.h"
+//#include "../Linux64/ur_rtde/dashboard_client.h"
+//#include "../Linux64/ur_rtde/robot_state.h"
+//#include "../Linux64/ur_rtde/rtde_control_interface.h"
+//#include "../Linux64/ur_rtde/rtde_control_script.h"
 
-#include "../Linux64/ur_rtde/rtde_io_interface_doc.h"
-#include "../Linux64/ur_rtde/rtde_io_interface.h"
+//#include "../Linux64/ur_rtde/rtde_io_interface_doc.h"
+//#include "../Linux64/ur_rtde/rtde_io_interface.h"
 //#include "../Linux64/ur_rtde/rtde_receive_interface_doc.h" //not needed, causes erros
-#include "../Linux64/ur_rtde/rtde_receive_interface.h"
-#include "../Linux64/ur_rtde/rtde_utility.h"
+//#include "../Linux64/ur_rtde/rtde_receive_interface.h"
+//#include "../Linux64/ur_rtde/rtde_utility.h"
 
-#include "../Linux64/ur_rtde/script_client.h"
-using namespace ur_rtde;
-//%feature("nspace") ur_rtde::RobotState;
+//#include "../Linux64/ur_rtde/script_client.h"
+using ur_rtde;
+%feature(nspace);
+%pragma(java) jniclasspackage="ur_rtde.rtde";
+
+
+
 //%immutable ur_rtde;
 %include <boost_shared_ptr.i>;
 %template(VectorDouble) std::vector<double>;
@@ -75,7 +79,7 @@ using namespace ur_rtde;
 
 //%template(Tuple) std::tuple<std::uint32_t, std::uint32_t, std::uint32_t, std::uint32_t>;
 //%template(CppTuple) std::tuple<unsigned int, unsigned int, unsigned int, unsigned int>;
-%template(SharedPtr) std::shared_ptr<ur_rtde::RobotState>;
+//%template(SharedPtr) std::shared_ptr<ur_rtde::RobotState>;
 
 ///////////////////////////////
 
@@ -86,18 +90,18 @@ using namespace ur_rtde;
 %include "../Linux64/ur_rtde/rtde_export.h"
 
 //%include "../Linux64/ur_rtde/rtde_control_interface_doc.h" //not needed, causes erros
-%include "../Linux64/ur_rtde/dashboard_enums.h"
-%include "../Linux64/ur_rtde/dashboard_client.h"
-%include "../Linux64/ur_rtde/robot_state.h"
-%include "../Linux64/ur_rtde/rtde_control_interface.h"
-%include "../Linux64/ur_rtde/rtde_control_script.h"
+//%include "../Linux64/ur_rtde/dashboard_enums.h"
+//%include "../Linux64/ur_rtde/dashboard_client.h"
+//%include "../Linux64/ur_rtde/robot_state.h"
+//%include "../Linux64/ur_rtde/rtde_control_interface.h"
+//%include "../Linux64/ur_rtde/rtde_control_script.h"
 
 //%include "../Linux64/ur_rtde/rtde_io_interface_doc.h" //not needed, causes erros
-%include "../Linux64/ur_rtde/rtde_io_interface.h"
+//%include "../Linux64/ur_rtde/rtde_io_interface.h"
 //%include "../Linux64/ur_rtde/rtde_receive_interface_doc.h" //not needed, causes erros
-%include "../Linux64/ur_rtde/rtde_receive_interface.h"
-%include "../Linux64/ur_rtde/rtde_utility.h"
+//%include "../Linux64/ur_rtde/rtde_receive_interface.h"
+//%include "../Linux64/ur_rtde/rtde_utility.h"
 %include "../Linux64/ur_rtde/rtde.h"
-%include "../Linux64/ur_rtde/script_client.h"
+//%include "../Linux64/ur_rtde/script_client.h"
 
 
