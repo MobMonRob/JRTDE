@@ -3,6 +3,10 @@
 
 %feature("nspace");
 
+SWIG_JAVABODY_PROXY(public, public, SWIGTYPE)
+SWIG_JAVABODY_TYPEWRAPPER(public, public, public, SWIGTYPE)
+SWIG_JAVABODY_METHODS(public, public, SWIGTYPE)
+
 %warnfilter(322) MAJOR_VERSION;
 %warnfilter(322) CB3_MAJOR_VERSION;
 
