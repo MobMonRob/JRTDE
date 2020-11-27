@@ -1,8 +1,10 @@
 package de.dhbw.rahmlab.rtde.api;
 
+import de.dhbw.rahmlab.rtde.impl.std.SharedPtr;
 import de.dhbw.rahmlab.rtde.impl.std.VectorString;
 import de.dhbw.rahmlab.rtde.impl.ur_rtde.RTDE;
 import de.dhbw.rahmlab.rtde.impl.ur_rtde.RTDE.RobotCommand;
+import de.dhbw.rahmlab.rtde.impl.ur_rtde.RobotState;
 
 /**
  *
@@ -10,7 +12,7 @@ import de.dhbw.rahmlab.rtde.impl.ur_rtde.RTDE.RobotCommand;
  */
 public class RTDEClient {
     
-    private de.dhbw.rahmlab.rtde.impl.ur_rtde.RTDE client;
+    private RTDE client;
     
     public RTDEClient(String hostname, int port, boolean verbose) {
         client = new RTDE(hostname, port, verbose);
@@ -56,9 +58,10 @@ public class RTDEClient {
         client.receive();
     }
 
-    /*public void receiveData(de.dhbw.rahmlab.rtde.impl.std.SharedPtr robot_state) {
-    de.dhbw.rahmlab.rtde.impl.RTDE_MODULEJNI.ur_rtde_RTDE_receiveData(swigCPtr, this, de.dhbw.rahmlab.rtde.impl.std.SharedPtr.getCPtr(robot_state), robot_state);
-    }*/
+    public void receiveData(RobotState robot_state){
+        boolean cMemoryOwn = false; // unklar ob true oder false richtig ist FIXME
+        client.receiveData(new SharedPtr(RobotState.getCPtr(robot_state), cMemoryOwn));
+    }
 
     public void send(RobotCommand robot_cmd) {
         client.send(robot_cmd);
