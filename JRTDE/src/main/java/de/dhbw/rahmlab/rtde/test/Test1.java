@@ -1,7 +1,10 @@
 package de.dhbw.rahmlab.rtde.test;
 
+import de.dhbw.rahmlab.rtde.impl.std.VectorDouble;
 import de.dhbw.rahmlab.rtde.impl.std.VectorString;
 import de.dhbw.rahmlab.rtde.impl.ur_rtde.RTDEReceiveInterface;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -15,11 +18,14 @@ public class Test1 {
      */
     public static void main(String[] args) {
         
+        // libjrtde.so, librtde.so, librtde.so.1.3 und librtde.so.1.3.6 müssen 
+        // nach /usr/java/packages/lib
         System.loadLibrary("jrtde");
         
         int port = 30004; 
         VectorString output_names = new VectorString();
         output_names.add("timestamp");
+        output_names.add("actual_q");
         
         RTDEReceiveInterface rtde_receive = new RTDEReceiveInterface("192.168.12.1", output_names, port, true);
         
@@ -27,11 +33,18 @@ public class Test1 {
         //-->RTDE synchronization started
         // aber dann passiert nichts mehr
         
+        double timestampoffset = rtde_receive.getTimestamp();
         while (true){
-            double timestamp = rtde_receive.getTimestamp();
-            System.out.println("timestamp = "+String.valueOf(timestamp));
-            //rtde_receive.receiveCallback();
-            // --> damit bleibe ich hängen
+            try {
+                double timestamp = rtde_receive.getTimestamp()-timestampoffset;
+                VectorDouble qv = rtde_receive.getActualQ();
+                System.out.println("timestamp = "+String.valueOf(timestamp)+" q="+qv.toString());
+                //rtde_receive.receiveCallback();
+                // --> damit bleibe ich hängen
+                Thread.sleep(10);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Test1.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         
         

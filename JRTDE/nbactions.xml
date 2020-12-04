@@ -10,7 +10,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
             </goals>
             <properties>
-                <exec.args>-enableassertions-Djava.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib:/home/oliver/JAVA/PROJECTS/JRTDE/JRTDE/natives/linux-amd64: -classpath %classpath de.dhbw.rahmlab.rtde.test.Test</exec.args>
+                <exec.args>-enableassertions -classpath %classpath de.dhbw.rahmlab.rtde.test.Test</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
@@ -24,7 +24,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
             </goals>
             <properties>
-                <exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} -enableassertions-Djava.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib:/home/oliver/JAVA/PROJECTS/JRTDE/JRTDE/natives/linux-amd64: -classpath %classpath de.dhbw.rahmlab.rtde.test.Test</exec.args>
+                <exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} -enableassertions -classpath %classpath de.dhbw.rahmlab.rtde.test.Test</exec.args>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
             </properties>
@@ -39,7 +39,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
             </goals>
             <properties>
-                <exec.args>-enableassertions-Djava.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib:/home/oliver/JAVA/PROJECTS/JRTDE/JRTDE/natives/linux-amd64: -classpath %classpath de.dhbw.rahmlab.rtde.test.Test</exec.args>
+                <exec.args>-enableassertions -classpath %classpath de.dhbw.rahmlab.rtde.test.Test</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
