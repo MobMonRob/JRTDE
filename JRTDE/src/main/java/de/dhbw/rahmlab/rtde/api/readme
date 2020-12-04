@@ -1,0 +1,15 @@
+/*public static SWIGTYPE_p_std__ostream hexDump(SWIGTYPE_p_std__ostream o, String p, long size) {
+    return new SWIGTYPE_p_std__ostream(de.dhbw.rahmlab.rtde.impl.RTDE_MODULEJNI.ur_rtde_RTDEUtility_hexDump(SWIGTYPE_p_std__ostream.getCPtr(o), p, size), false);
+  }*/
+
+--> für ostream ist kein typemap verfügbar, ostream ist aber durchaus häufig, so würde es sich lohnen einen eigenen Typemapper zu bauen
+
+ /*public SWIGTYPE_p_std__tupleT_unsigned_int_unsigned_int_unsigned_int_unsigned_int_t getControllerVersion() {
+    return new SWIGTYPE_p_std__tupleT_unsigned_int_unsigned_int_unsigned_int_unsigned_int_t(de.dhbw.rahmlab.rtde.impl.RTDE_MODULEJNI.ur_rtde_RTDE_getControllerVersion(swigCPtr, this), true);
+  }*/
+
+--> wegen templates entsteht das Problem. Allerdings bietet swig Unterstützung um den c++ code also eigentlich das header file in dem die betreffende class
+definiert ist zu patchen. Auf diese Weise könnte man dafür sorgen dass ein struct mit den ganzen ints zurückgeliefert wird und die 
+ursprüngliche Methode mit dem template-basierten Rückgabewert unterdrückt wird.
+
+Grundsätzlich könnte man auch die beiden Methoden von swig unterdrücken lassen.

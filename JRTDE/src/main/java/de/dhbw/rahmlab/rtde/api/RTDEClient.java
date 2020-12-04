@@ -59,7 +59,7 @@ public class RTDEClient {
     }
 
     public void receiveData(RobotState robot_state){
-        boolean cMemoryOwn = false; // unklar ob true oder false richtig ist FIXME
+        boolean cMemoryOwn = true; // unklar ob true oder false richtig ist FIXME
         client.receiveData(new SharedPtr(RobotState.getCPtr(robot_state), cMemoryOwn));
     }
 
